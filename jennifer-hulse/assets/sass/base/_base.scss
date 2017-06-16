@@ -1,11 +1,4 @@
-$basefont: 18;
-@mixin fontsizeEM($fontsize, $important: false) {
-	@if($important) {
-		font-size: ($fontsize / $basefont) * 1em !important;
-	} else {
-		font-size: ($fontsize / $basefont) * 1em;
-	}
-}
+@import "px2em";
 
 body {
   font-family: 'Josefin Slab', serif;

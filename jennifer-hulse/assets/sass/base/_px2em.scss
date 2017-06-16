@@ -1,0 +1,8 @@
+$basefont: 16;
+@mixin fontsizeEM($fontsize, $important: false) {
+	@if($important) {
+		font-size: ($fontsize / 15) * 1rem !important;
+	} else {
+		font-size: ($fontsize / 15) * 1rem;
+	}
+}
