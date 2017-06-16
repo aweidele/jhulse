@@ -36,7 +36,7 @@
 }
 
 .bs-hero.full-screen .carousel-inner .item .bs-info h1 span {
-  font-size: 18px;
+  @include fontsizeEM(18);
 }
 
 .bs-hero.full-screen .carousel.slide .carousel-control {

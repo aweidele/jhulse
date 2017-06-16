@@ -254,13 +254,13 @@
 }
 
 .txt-xl {
-  font-size: 26px !important;
+  @include fontsizeEM(26,true);
   font-weight: 300;
   line-height: 36px;
 }
 
 .txt-sm {
-  font-size: 16px !important;
+  @include fontsizeEM(16,true);
   font-weight: normal;
   line-height: 20px;
 }

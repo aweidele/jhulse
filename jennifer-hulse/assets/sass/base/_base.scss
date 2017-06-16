@@ -1,6 +1,10 @@
 $basefont: 18;
-@mixin fontsizeEM($fontsize) {
-	font-size: ($fontsize / $basefont) * 1em;
+@mixin fontsizeEM($fontsize, $important: false) {
+	@if($important) {
+		font-size: ($fontsize / $basefont) * 1em !important;
+	} else {
+		font-size: ($fontsize / $basefont) * 1em;
+	}
 }
 
 body {

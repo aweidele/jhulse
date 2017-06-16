@@ -108,7 +108,7 @@
 
 .flex-direction-nav a:before {
   font-family: "fontawesome";
-  font-size: 16px;
+  @include fontsizeEM(16);
   display: block;
   content: '\f104';
   color: #fff;
