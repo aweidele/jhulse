@@ -34,7 +34,7 @@
 h3.timeline-title {
     margin:0;
     color:#C8CCD7;
-    font-size:20px;
+    @include fontsizeEM(20);
     font-weight:400;
     margin:0 0 5px;
     text-transform:uppercase;
@@ -61,7 +61,7 @@ h3.timeline-title {
     position:relative;
 }
 .timeline-desk h1 {
-    font-size:16px;
+    @include fontsizeEM(16);
     font-weight:400;
     margin:0 0 5px;
 }
@@ -105,7 +105,7 @@ h3.timeline-title {
     line-height: 65px;
     text-align:center;
     color:#fff;
-    font-size: 30px;
+    @include fontsizeEM(30);
 }
 
 .timeline .timeline-icon i {
@@ -118,7 +118,7 @@ h3.timeline-title {
 }
 
 .timeline .time-icon:before {
-    font-size:16px;
+    @include fontsizeEM(16);
     margin-top:5px;
 }
 
@@ -141,7 +141,7 @@ h3.timeline-title {
 .timeline-desk h5 span {
     color:#999999;
     display:block;
-    font-size:12px;
+    @include fontsizeEM(12);
     margin-bottom:4px;
 }
 
@@ -155,7 +155,7 @@ h3.timeline-title {
 }
 
 .timeline-desk p {
-    font-size:14px;
+    @include fontsizeEM(14);
     margin-bottom:0;
     color:#999;
 }
@@ -222,7 +222,7 @@ h3.timeline-title {
 .timeline.dark h3.timeline-title {
     margin:0;
     color:#333;
-    font-size:20px;
+    @include fontsizeEM(20);
     font-weight:400;
     margin:0 0 5px;
     text-transform:uppercase;

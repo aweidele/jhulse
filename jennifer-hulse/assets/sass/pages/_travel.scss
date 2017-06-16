@@ -38,7 +38,7 @@
 }
 
 .travel-form.icon-tabs li i {
-  font-size: 35px;
+  @include fontsizeEM(35);
   position: relative;
   top: 7px;
   padding-right: 10px;

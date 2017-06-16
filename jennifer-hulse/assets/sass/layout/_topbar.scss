@@ -43,7 +43,7 @@
 }
 
 .top-link.text-uppercase {
-  font-size: 12px;
+  @include fontsizeEM(12);
 }
 
 

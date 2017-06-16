@@ -183,7 +183,7 @@
 
 
 .icon-box-tabs .nav-pills>li>a i{
-    font-size: 36px;
+    @include fontsizeEM(36);
 }
 
 .icon-box-tabs .panel-body {
@@ -248,7 +248,7 @@
 }
 
 .icon-tabs li i {
-    font-size: 55px;
+    @include fontsizeEM(55);
     margin-bottom: 10px;
     display: block;
 }

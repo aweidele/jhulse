@@ -3,22 +3,22 @@
 }
 
 .intro-title h2 {
-  font-size: 36px;
+  @include fontsizeEM(36);
 }
 
 .intro-title p {
-  font-size: 16px;
+  @include fontsizeEM(16);
   font-weight: 300;
   color: #fff !important;
   letter-spacing: 2px;
 }
 
 .intro-title p span {
-  font-size: 26px;
+  @include fontsizeEM(26);
 }
 
 .intro-title i {
-  font-size: 26px;
+  @include fontsizeEM(26);
   color: rgba(255,255,255,.5);
   line-height: 20px;
   top: 4px;

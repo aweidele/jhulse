@@ -12,7 +12,7 @@
 }
 
 .fun-factor .icon i {
-    font-size: 36px;
+    @include fontsizeEM(36);
     color: #222;
 }
 
@@ -193,5 +193,5 @@
 
 .fun-icon-text-parallel .icon i {
     padding-right: 10px;
-    font-size: 36px;
+    @include fontsizeEM(36);
 }

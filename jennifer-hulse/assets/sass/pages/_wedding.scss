@@ -4,16 +4,16 @@
 }
 
 .bride-groom-txt {
-  font-size: 100px !important;
+  @include fontsizeEM(100,true);
   line-height: normal;
 }
 
 .wd-font-50 {
-  font-size: 50px !important;
+  @include fontsizeEM(50,true);
 }
 
 .wd-font-72 {
-  font-size: 72px !important;
+  @include fontsizeEM(72,true);
 }
 
 .wd-font-light {
@@ -65,7 +65,7 @@
 }
 
 .heart-space {
-  font-size: 30px;
+  @include fontsizeEM(30);
   padding: 0 10px;
 }
 

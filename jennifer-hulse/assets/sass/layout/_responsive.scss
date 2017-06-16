@@ -173,7 +173,7 @@ Table of contents
         padding: 0
     }
     .menuzord-responsive .logo-brand {
-        font-size: 20px;
+        @include fontsizeEM(20);
         line-height: 2.55;
     }
     .menuzord-responsive .showhide {
@@ -243,7 +243,7 @@ Table of contents
         position: absolute;
         right: 0;
         top: 0;
-        font-size: 22px;
+        @include fontsizeEM(22);
         text-align: center;
         line-height: 43px;
         border-left: solid 1px #f5f5f5
@@ -252,7 +252,7 @@ Table of contents
         height: 38px;
         right: 0;
         top: 0;
-        font-size: 18px;
+        @include fontsizeEM(18);
         line-height: 36px
     }
     .menuzord-responsive .menuzord-menu>li>.megamenu {
@@ -471,23 +471,23 @@ Table of contents
     }
 
     .banner-box h1, .banner-title h1 {
-        font-size: 30px;
+        @include fontsizeEM(30);
     }
 
     .banner-box h3, .banner-title h3, h3 {
-        font-size: 18px;
+        @include fontsizeEM(18);
     }
 
     h1 {
-        font-size: 26px;
+        @include fontsizeEM(26);
     }
 
     h2 {
-        font-size: 20px;
+        @include fontsizeEM(20);
     }
 
     .b-lg-txt {
-        font-size: 40px !important;
+        @include fontsizeEM(40,true);
     }
 
     .post-single .post-desk {
@@ -695,24 +695,24 @@ Table of contents
     }
 
     .btn-medium {
-        font-size: 12px;
+        @include fontsizeEM(12);
     }
 
     .intro-title h2 {
-        font-size: 20px;
+        @include fontsizeEM(20);
     }
 
     .intro-title p {
-        font-size: 12px;
+        @include fontsizeEM(12);
     }
 
     .intro-title p span {
-        font-size: 20px;
+        @include fontsizeEM(20);
     }
 
     .tp-caption .btn {
         padding: 5px;
-        font-size: 10px;
+        @include fontsizeEM(10);
     }
 
 
@@ -732,11 +732,11 @@ Table of contents
 
     .travel-form.icon-tabs .nav>li>a {
         padding: 10px 5px;
-        font-size: 12px;
+        @include fontsizeEM(12);
     }
 
     .travel-form.icon-tabs li i {
-        font-size: 20px;
+        @include fontsizeEM(20);
     }
 
     .travel-form .nav > li {
@@ -756,7 +756,7 @@ Table of contents
         display: inline-block;
         margin-bottom: 0;
         font-weight: normal;
-        font-size: 11px;
+        @include fontsizeEM(11);
     }
 
     .travel-form .btn {
@@ -789,7 +789,7 @@ Table of contents
     }
 
     .fashion-title h1 {
-        font-size: 25px;
+        @include fontsizeEM(25);
         font-weight: 100;
         letter-spacing: 5px;
         margin-bottom: 0;
@@ -966,7 +966,7 @@ Table of contents
 
     .tp-caption .btn {
         padding: 5px;
-        font-size: 6px;
+        @include fontsizeEM(6);
     }
 
     /**/
@@ -979,12 +979,12 @@ Table of contents
 
     .count-down .c-value,
     .count-down-alt .c-value {
-        font-size: 20px;
+        @include fontsizeEM(20);
     }
 
     .count-down .c-title,
     .count-down-alt .c-title {
-        font-size: 12px;
+        @include fontsizeEM(12);
         letter-spacing: 3px;
     }
 

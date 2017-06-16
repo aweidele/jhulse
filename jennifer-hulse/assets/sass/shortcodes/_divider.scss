@@ -107,7 +107,7 @@
 }
 
 .divider i {
-    font-size: 18px;
+    @include fontsizeEM(18);
     position: absolute;
     top: -10px;
     background: #fff;
@@ -124,7 +124,7 @@
     text-align: center;
     line-height: 30px;
     color: #b4b4b4;
-    font-size: 15px;
+    @include fontsizeEM(15);
 }
 
 .d-border i {
@@ -136,5 +136,5 @@
     top: -15px;
     text-align: center;
     line-height: 30px;
-    font-size: 15px;
+    @include fontsizeEM(15);
 }

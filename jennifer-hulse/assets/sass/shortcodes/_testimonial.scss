@@ -93,7 +93,7 @@
 
 .testimonial-meta {
     margin-top: 10px;
-    font-size: 14px;
+    @include fontsizeEM(14);
     text-transform: uppercase;
     color: #222222;
     letter-spacing: 2px;
@@ -102,7 +102,7 @@
 
 .testimonial-meta span {
     display: block;
-    font-size: 12px;
+    @include fontsizeEM(12);
     color: #7f7f7f;
 }
 
@@ -144,11 +144,11 @@
 #testimonial-3 .item .icon{
     margin-bottom: 30px;
     display: inline-block;
-    font-size: 30px;
+    @include fontsizeEM(30);
 }
 
 .big-icon .item .icon {
-    font-size: 60px !important;
+    @include fontsizeEM(60,true);
 }
 
 
@@ -156,7 +156,7 @@
 #testimonial-3 .content p,
 .light-txt .content p{
     font-style: italic;
-    font-size: 16px;
+    @include fontsizeEM(16);
     line-height: 30px;
 }
 

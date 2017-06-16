@@ -69,7 +69,7 @@
 
 .aside-social {
   border: 1px solid #ddd;
-  font-size: 0;
+  @include fontsizeEM(0);
   margin-bottom: 20px;
 }
 
@@ -108,13 +108,13 @@
 
 .aside-social li i {
   color: #aaa;
-  font-size: 16px;
+  @include fontsizeEM(16);
   margin-top: 5px;
   transition:  0.3s ease 0s;
 }
 
 .aside-social li p {
-  font-size: 11px;
+  @include fontsizeEM(11);
   margin-bottom: 6px;
   margin-top: 5px;
   transition:  0.3s ease 0s;

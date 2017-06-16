@@ -40,14 +40,14 @@
 
 .team-member .team-intro.light-txt span {
     color: rgba(255, 255, 255, .5);
-    font-size: 12px;
+    @include fontsizeEM(12);
 }
 
 
 .team-member .s-link a{
     margin: 0 10px;
     color: #333;
-    font-size: 16px;
+    @include fontsizeEM(16);
 }
 
 .t-s-link{
@@ -58,7 +58,7 @@
 .t-s-link a {
     margin-right: 10px;
     color: #333;
-    font-size: 16px;
+    @include fontsizeEM(16);
 }
 
 /**/
@@ -119,7 +119,7 @@
     transform: translateY(45%);
     -webkit-transition: all 0.3s 0.2s;
     transition: all 0.3s 0.2s;
-    font-size: 35px;
+    @include fontsizeEM(35);
 }
 
 .desk,
@@ -131,13 +131,13 @@
 
 .desk h4 {
     margin-bottom: 25px;
-    font-size: 14px;
+    @include fontsizeEM(14);
     text-transform: uppercase;
     letter-spacing: 4px;
 }
 
 .desk p {
-    font-size: 14px;
+    @include fontsizeEM(14);
     margin-bottom: 0;
     font-weight: normal;
     color: #7e7e7e;
@@ -159,7 +159,7 @@
 }
 
 .team-title span {
-    font-size: 12px;
+    @include fontsizeEM(12);
     text-transform: uppercase;
     color: #a5a5a5;
     letter-spacing: 1px;

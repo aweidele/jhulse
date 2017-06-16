@@ -104,7 +104,7 @@
     background: rgba(0,0,0,0.5);
     padding: 15px 20px;
     color: #fff;
-    font-size: 24px;
+    @include fontsizeEM(24);
 }
 
 
@@ -308,7 +308,7 @@
     zoom: 1;
     margin: 5px;
     padding: 5px 15px;
-    font-size: 20px;
+    @include fontsizeEM(20);
     border-radius: 0;
     background: #000;
     filter: Alpha(Opacity=50);

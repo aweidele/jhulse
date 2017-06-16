@@ -53,12 +53,12 @@
 
 .count-down .c-value,
 .count-down-alt .c-value {
-    font-size: 30px;
+    @include fontsizeEM(30);
 }
 
 .count-down .c-title,
 .count-down-alt .c-title {
-    font-size: 14px;
+    @include fontsizeEM(14);
     letter-spacing: 3px;
 }
 
@@ -92,5 +92,5 @@
 }
 
 .count-icon i {
-    font-size: 40px;
+    @include fontsizeEM(40);
 }

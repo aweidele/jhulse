@@ -8,7 +8,7 @@
 }
 
 .featured-item .icon i{
-    font-size: 36px;
+    @include fontsizeEM(36);
 }
 
 .featured-item .title h4 {
@@ -186,7 +186,7 @@
 
 .featured-item.feature-border-box .icon i {
     color: #fff;
-    font-size: 30px;
+    @include fontsizeEM(30);
     line-height: 60px;
 }
 
@@ -233,7 +233,7 @@
 
 .featured-item.feature-bg-box .icon i {
     color: #808184;
-    font-size: 30px;
+    @include fontsizeEM(30);
     line-height: 80px;
 }
 
@@ -285,7 +285,7 @@
 
 .featured-item .number {
     color: #e1e1e1;
-    font-size: 36px;
+    @include fontsizeEM(36);
     /*font-family: 'Abel', sans-serif;*/
     font-weight: normal;
 }

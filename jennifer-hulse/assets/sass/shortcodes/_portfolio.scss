@@ -77,7 +77,7 @@
     transform: translateY(45%);
     -webkit-transition: all 0.3s 0.2s;
     transition: all 0.3s 0.2s;
-    font-size: 35px;
+    @include fontsizeEM(35);
 }
 
 .portfolio-description,
@@ -89,13 +89,13 @@
 
 .portfolio-description h4 {
     margin-bottom: 5px;
-    font-size: 14px;
+    @include fontsizeEM(14);
     text-transform: uppercase;
     letter-spacing: 4px;
 }
 
 .portfolio-description p {
-    font-size:12px;
+    @include fontsizeEM(12);
     margin-bottom: 0;
     text-transform: uppercase;
     /*font-family: 'Abel', sans-serif;*/
@@ -161,7 +161,7 @@
     color: #a9a8a8;
     margin: 0 15px;
     text-transform: uppercase;
-    font-size: 14px;
+    @include fontsizeEM(14);
     /*font-family: 'Abel', sans-serif;*/
     letter-spacing: 3px;
 }
@@ -191,7 +191,7 @@
 .portfolio-with-title .portfolio-title h4,
 .portfolio-with-title .portfolio-title h4 a {
     margin: 0;
-    font-size: 14px;
+    @include fontsizeEM(14);
     text-transform: uppercase;
     letter-spacing: 1px;
     color:#222
@@ -200,7 +200,7 @@
 .portfolio-with-title .portfolio-title h3,
 .portfolio-with-title .portfolio-title h3 a {
     margin: 0 0 10px 0;
-    font-size: 18px;
+    @include fontsizeEM(18);
     text-transform: uppercase;
     letter-spacing: 1px;
     color:#222
@@ -208,7 +208,7 @@
 
 .portfolio-with-title .portfolio-title p {
     margin: 0;
-    font-size: 12px;
+    @include fontsizeEM(12);
     text-transform: uppercase;
     /*font-family: 'Abel', sans-serif;*/
     font-weight: normal;
@@ -339,7 +339,7 @@
 }
 
 .video-parallax .container i{
-    font-size: 50px;
+    @include fontsizeEM(50);
     margin-bottom: 30px;
     display: block;
 }
@@ -382,7 +382,7 @@
     width: 130px;
     letter-spacing: 2px;
     color: #000;
-    font-size: 12px;
+    @include fontsizeEM(12);
     text-transform: uppercase;
 }
 

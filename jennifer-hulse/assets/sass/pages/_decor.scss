@@ -30,7 +30,7 @@
   top: 35%;
   right: 10%;
   text-align: right;
-  font-size: 24px;
+  @include fontsizeEM(24);
   font-weight: 300;
   text-transform: uppercase;
 }

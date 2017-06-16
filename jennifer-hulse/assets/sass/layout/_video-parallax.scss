@@ -14,7 +14,7 @@
 }
 
 .video-parallax .container i{
-  font-size: 50px;
+  @include fontsizeEM(50);
   margin-bottom: 30px;
   display: block;
 }

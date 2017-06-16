@@ -45,7 +45,7 @@
 }
 
 .txt-extra-xl {
-  font-size: 70px;
+  @include fontsizeEM(70);
 }
 
 .light-txt-trans {

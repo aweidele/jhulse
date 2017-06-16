@@ -151,13 +151,13 @@
 }
 
 .post-sub-title {
-    font-size: 16px;
+    @include fontsizeEM(16);
 }
 
 
 .post-single .post-desk .date {
     margin-bottom: 25px;
-    font-size: 14px;
+    @include fontsizeEM(14);
     text-transform: uppercase;
     letter-spacing: 2px;
     float: left;
@@ -206,7 +206,7 @@
 .post-single .post-cat li a {
     color: #909090;
     text-transform: uppercase;
-    font-size: 12px;
+    @include fontsizeEM(12);
 }
 
 .post-single .post-cat li a:after {
@@ -228,7 +228,7 @@
 .post-list-aside .post-single .post-desk .date,
 .post-list .post-single .post-desk a.author,
 .post-list-aside .post-desk a.author {
-    font-size: 12px;
+    @include fontsizeEM(12);
     color: #909090;
 }
 
