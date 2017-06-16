@@ -53,6 +53,11 @@ function register_my_menu() {
   //register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
 }
 
+/*** IMAGE SIZES ***/
+add_theme_support('post-thumbnails');
+add_image_size('Portfolio Gallery',1170,500,true);
+add_image_size('Homepage Portfolio',800,600,true);
+add_image_size('Homepage Portfolio SMall',350,263,true);
 
 
 /*** THEME CUSTOMIZATION SETTINGS ***/
@@ -130,4 +135,63 @@ function mytheme_customize_register( $wp_customize ) {
 }
 
 add_action( 'customize_register', 'mytheme_customize_register' );
+
+
+/*** POST TYPES ***/
+add_action('init', 'register_post_types');
+function register_post_types() {
+	/**** REGISTER PROJECTS POST TYPE ****/
+	$labels = array(
+		'name' => _x('Portfolio', 'post type general name'),
+		'singular_name' => _x('Project', 'post type singular name'),
+		'add_new' => _x('Add New Project', 'portfolio item'),
+		'add_new_item' => __('Add New Project'),
+		'edit_item' => __('Edit Project'),
+		'new_item' => __('New Project'),
+		'view_item' => __('View Project'),
+		'search_items' => __('Search Projects'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','tags')
+		//"menu_position" => 21
+	  ); 
+ 
+	register_post_type( 'portfolio' , $args );	
+	
+	// Project Tags Taxonomy
+    register_taxonomy(
+        'portfolio_tags',
+        'portfolio',
+        array(
+            'labels' => array(
+                'name'              => _x( 'Project Tags' , 'taxonomy general name' ),
+                'singular_name'     => _x( 'Project Tag' , 'taxonomy singular name'),
+                'add_new_item' => 'Add Project Tag',
+                'new_item_name' => "New Project Tag"
+            ),
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'show_tagcloud' => false,
+            'hierarchical' => false,
+            'support' => array('tags')
+        )
+    );
+	
+	flush_rewrite_rules();
+
+}
+
 ?>
