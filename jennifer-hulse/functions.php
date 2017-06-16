@@ -2,6 +2,7 @@
 
 /** ENQUEUE STYLES AND SCRIPES **/
 function themeEnqueue() {
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Josefin+Slab:400,400i,700,700i|Source+Sans+Pro:600,600i,900,900i' );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/assets/vendor/bootstrap/css/bootstrap.min.css' );
 	wp_enqueue_style( 'animate', get_template_directory_uri().'/assets/vendor/animate/animate.css' );
 	wp_enqueue_style( 'elastic', get_template_directory_uri().'/assets/vendor/elasic-slider/elastic.css' );

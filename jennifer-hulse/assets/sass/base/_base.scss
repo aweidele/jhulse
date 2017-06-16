@@ -1,9 +1,14 @@
+$basefont: 18;
+@mixin fontsizeEM($fontsize) {
+	font-size: ($fontsize / $basefont) * 1em;
+}
+
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Josefin Slab', serif;
   line-height: 1.5;
   color: #323232;
-  font-size: 15px;
-  font-weight: 400;
+	font-size: #{$basefont}px;
+  font-weight: 600;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -77,7 +82,7 @@ pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 30px;
-  font-size: 13px;
+  @include fontsizeEM(13);
   line-height: 1.42857143;
   color: #333;
   word-break: break-all;
