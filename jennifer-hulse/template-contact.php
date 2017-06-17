@@ -1,6 +1,7 @@
 <?php 
 /* Template Name: Contact */ 
 get_header();
+if(have_posts()) : while(have_posts()) : the_post();
 ?>
        <!--body content start-->
         <section class="body-content">
@@ -9,18 +10,24 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                            <h4 class="text-uppercase">Office Location</h4>
-                            <p>Upper Level, Overseas Passenger Terminal, The Rocks, Sydney 2000</p>
+                            <h4 class="text-uppercase"><?php echo get_field('contact_heading'); ?></h4>
+<?php if(get_field('address') != '') { ?>
+                            <p><?php echo get_field('address'); ?></p>
+<?php } ?>
                             <address>
-                                <p>Telp: +62 500 800 123 </p>
-                                <p>Fax: +62 500 800 112 </p>
-                                <p>Email: testmail@yourdomain.com</p>
+<?php if(get_field('phone') != '') { ?>
+                                <p>Tel: <?php echo get_field('phone'); ?></p>
+<?php } if(get_field('fax') != '') { ?>
+                                <p>Fax: <?php echo get_field('fax'); ?></p>
+<?php } if(get_field('email') != '') { ?>
+								<p>Email: <a href="mailto:<?php echo get_field('email'); ?>"><?php echo get_field('email'); ?></a></p>
+<?php } ?>
                             </address>
                         </div>
 
                         <div class="col-md-8">
-                            <h4 class="text-uppercase">have you a question?</h4>
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Nam libero tempore</p>
+                            <h4 class="text-uppercase"><?php echo get_field('contact_form_heading'); ?></h4>
+                            <p><?php the_content(); ?></p>
 
                             <form class="contact-comments m-top-50 js-Mailer" method="post">
 
@@ -76,4 +83,7 @@ get_header();
             </div>
         </section>
         <!--body content end-->
-<?php get_footer(); ?>
+<?php 
+endwhile;
+endif;
+get_footer(); ?>
