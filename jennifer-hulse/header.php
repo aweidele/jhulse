@@ -41,7 +41,7 @@
 
                         <!--logo start-->
                         <a href="<?php echo get_home_url(); ?>" class="logo-brand">
-                            <img class="retina" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Massive">
+                            <img class="retina" src="<?php echo get_option('theme_logo'); ?>" alt="Massive">
                         </a>
                         <!--logo end-->
                         <!--mega menu start-->

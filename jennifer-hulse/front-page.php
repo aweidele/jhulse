@@ -1,6 +1,8 @@
-<?php get_header(); ?>
+<?php get_header(); 
+	$hero = get_field('hero_image',$post->ID);
+?>
         <!--hero section-->
-        <div class="banner-state text-center vertical-align banner-16 height-600">
+        <div class="banner-state text-center vertical-align height-600" style="background-image: url(<?php echo $hero['sizes']['Hero Image']; ?>)">
 
         </div>
         <!--hero section-->

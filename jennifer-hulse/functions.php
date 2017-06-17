@@ -57,6 +57,7 @@ function register_my_menu() {
 /*** IMAGE SIZES ***/
 add_theme_support('post-thumbnails');
 add_image_size('Portfolio Gallery',1170,800,true);
+add_image_size('Hero Image',1920,99999);
 add_image_size('Homepage Portfolio',800,600,true);
 add_image_size('Homepage Portfolio SMall',350,263,true);
 
@@ -65,12 +66,13 @@ add_image_size('Homepage Portfolio SMall',350,263,true);
 function mytheme_customize_register( $wp_customize ) {
 	
 	// ADD SECTION
-	$wp_customize->add_section( 'theme_footer' , array(
-    	'title'      => __( 'Footer Information', 'mytheme' ),
+	$wp_customize->add_section( 'theme_social' , array(
+    	'title'      => __( 'Social Media', 'mytheme' ),
 		'priority'   => 30,) 
   	);
 	
 	// ADD OPTIONS
+	$wp_customize->add_setting( 'theme_logo'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_copyright'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_facebook'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_twitter'    , array('transport' => 'refresh','type' => 'option'));
@@ -83,54 +85,60 @@ function mytheme_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'theme_behance'    , array('transport' => 'refresh','type' => 'option'));
 	
 	/// ADD CONTROLS
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_logo',
+      array(
+		'label' => 'Upload Logo',
+		'section' => 'title_tagline',
+		'settings' => 'theme_logo',
+	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_copyright', array(
 		'label'        => __( 'Copyright info', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'title_tagline',
 		'settings'   => 'theme_copyright',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_facebook', array(
 		'label'        => __( 'Facebook', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'theme_social',
 		'settings'   => 'theme_facebook',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_twitter', array(
 		'label'        => __( 'Twitter', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'theme_social',
 		'settings'   => 'theme_twitter',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_instagram', array(
 		'label'        => __( 'Instagram', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'theme_social',
 		'settings'   => 'theme_instagram',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_pinterest', array(
 		'label'        => __( 'Pinterest', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'theme_social',
 		'settings'   => 'theme_pinterest',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_youtube', array(
 		'label'        => __( 'YouTube', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'theme_social',
 		'settings'   => 'theme_youtube',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_houzz', array(
 		'label'        => __( 'Houzz', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'theme_social',
 		'settings'   => 'theme_houzz',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_google', array(
 		'label'        => __( 'Google+', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'theme_social',
 		'settings'   => 'theme_google',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_dribbble', array(
 		'label'        => __( 'Dribbble', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'theme_social',
 		'settings'   => 'theme_dribbble',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_behance', array(
 		'label'        => __( 'Behance', 'mytheme' ),
-		'section'    => 'theme_footer',
+		'section'    => 'theme_social',
 		'settings'   => 'theme_behance',
   	) ) );
 }
