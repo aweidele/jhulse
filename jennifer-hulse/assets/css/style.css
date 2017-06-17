@@ -2087,10 +2087,3 @@ Table of contents
   .count-down .c-value, .count-down-alt .c-value { font-size: 20px; }
   .count-down .c-title, .count-down-alt .c-title { font-size: 12px; letter-spacing: 3px; }
   .count-down .c-grid, .count-down-alt .c-grid { margin: 10px; } }
-wn-alt.round .c-grid { border-radius: 0px !important; }
-  .tp-caption .btn { padding: 5px; font-size: 0.4rem; }
-  /**/
-  .count-down .c-grid, .count-down-alt .c-grid { height: 70px; padding-top: 5px; width: 40%; }
-  .count-down .c-value, .count-down-alt .c-value { font-size: 1.33333rem; }
-  .count-down .c-title, .count-down-alt .c-title { font-size: 0.8rem; letter-spacing: 3px; }
-  .count-down .c-grid, .count-down-alt .c-grid { margin: 10px; } }
