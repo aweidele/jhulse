@@ -11,7 +11,7 @@
     padding-top: 15px;
     background: #222222;
     color: #fff;
-    @include fontsizeEM(30);
+    font-size: 30px;
     text-align: center;
     margin-right: 40px;
 }
@@ -23,7 +23,7 @@
 }
 
 .blog-classic .date span {
-    @include fontsizeEM(12);
+    font-size: 12px;
     display: block;
 }
 
@@ -54,7 +54,7 @@
     margin-right: 10px;
     color: #a7a7a7;
     text-transform: uppercase;
-    @include fontsizeEM(12);
+    font-size: 12px;
 }
 .post-meta li a {
     margin-right: 5px;
@@ -68,7 +68,7 @@
 .blog-post blockquote {
     padding: 0;
     margin: 0 0 20px;
-    @include fontsizeEM(17.5);
+    font-size: 17.5px;
     border-left: none;
     font-style: italic;
 }
@@ -88,7 +88,7 @@
 }
 
 .portfolio-with-title.blog-m .portfolio-title h4 a {
-    @include fontsizeEM(16);
+    font-size: 16px;
 }
 
 .portfolio-with-title.blog-m .portfolio-title p {
@@ -174,7 +174,7 @@
     border: none;
     outline: none;
     color: #ccc;
-    @include fontsizeEM(14);
+    font-size: 14px;
 }
 
 .search-row input {
@@ -199,7 +199,7 @@
 }
 
 .widget h6 {
-    @include fontsizeEM(14);
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -272,7 +272,7 @@
     display: block;
     color: #333;
     text-transform: uppercase;
-    @include fontsizeEM(13);
+    font-size: 13px;
 }
 
 .widget-social-link a {
@@ -285,7 +285,7 @@
     height: 35px;
     line-height: 35px;
     text-align: center;
-    @include fontsizeEM(16);
+    font-size: 16px;
     color: #5a5a5a;
     margin: 0 15px 15px 0 ;
 }
@@ -314,7 +314,7 @@ blog-masonry
 ------------------------------*/
 .portfolio-with-title.blog-m .portfolio-title p {
     margin: 5px 0 0 0;
-    @include fontsizeEM(14);
+    font-size: 14px;
     text-transform: none;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: normal;
@@ -328,7 +328,7 @@ blog-masonry
 }
 
 .portfolio-with-title.blog-m .portfolio-title .date {
-    @include fontsizeEM(12);
+    font-size: 12px;
     margin:5px 0 20px 0;
     display: block;
     letter-spacing: 1px;
@@ -349,7 +349,7 @@ comments-list
     /*font-family: 'Abel', sans-serif;*/
     font-weight: bold;
     letter-spacing: 1px;
-    @include fontsizeEM(12);
+    font-size: 12px;
 }
 
 .comments-list .media>.pull-left {
@@ -429,7 +429,7 @@ comments-list
 }
 .pagination-post .arrow {
     color: #e5e5e5;
-    @include fontsizeEM(50);
+    font-size: 50px;
     line-height: 50px;
 }
 
@@ -440,7 +440,7 @@ comments-list
 
 .pagination-post .post-list-link a {
     color: #d2d2d2;
-    @include fontsizeEM(30);
+    font-size: 30px;
     outline: none;
 }
 

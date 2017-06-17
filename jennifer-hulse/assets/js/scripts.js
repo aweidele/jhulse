@@ -1,4 +1,3 @@
-var $ = jQuery;
 ;(function () {
     "use strict";
 

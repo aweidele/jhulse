@@ -20,7 +20,7 @@ a.show-detail {
     display: inline-block;
     text-transform: uppercase;
     color: #cbcbcb;
-    @include fontsizeEM(12);
+    font-size: 12px;
 }
 
 a.show-detail:after{
@@ -59,7 +59,7 @@ a.show-detail:after{
 
 .career-details-info .c-list-row .info {
     padding-left: 100px;
-    @include fontsizeEM(14);
+    font-size: 14px;
     color: #7e7e7e;
 }
 
@@ -69,7 +69,8 @@ a.show-detail:after{
 
 .career-details-info .c-list-row ul li {
     padding: 0;
-    @include fontsizeEM(14);
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
     color: #7e7e7e;
 }
 

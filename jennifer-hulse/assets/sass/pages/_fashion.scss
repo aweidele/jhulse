@@ -1,6 +1,6 @@
 
 .fashion-title h1 {
-  @include fontsizeEM(100);
+  font-size: 100px;
   font-weight: 100;
   letter-spacing: 5px;
   margin-bottom: 0;
@@ -8,7 +8,7 @@
 
 .fashion-footer p {
   line-height: 20px;
-  @include fontsizeEM(13);
+  font-size: 13px;
 }
 
 .fashion-footer .subscribe-form {
@@ -34,7 +34,7 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   display: block;
-  @include fontsizeEM(13);
+  font-size: 13px;
 }
 
 .fashion-footer ul li a:hover {

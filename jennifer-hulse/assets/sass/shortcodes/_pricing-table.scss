@@ -16,7 +16,7 @@
 }
 
 .price-col h1 {
-    @include fontsizeEM(16);
+    font-size: 16px;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
@@ -36,17 +36,17 @@
 }
 
 .price-col  .dollar {
-    @include fontsizeEM(42);
+    font-size: 42px;
     font-weight: normal;
 }
 
 .price-col  .dollar span {
-    @include fontsizeEM(16);
+    font-size: 16px;
     margin-left: -10px;
 }
 
 .price-col  .duration {
-    @include fontsizeEM(12);
+    font-size: 12px;
     text-transform: uppercase;
 }
 

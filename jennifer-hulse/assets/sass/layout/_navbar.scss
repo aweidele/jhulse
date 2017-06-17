@@ -2,7 +2,7 @@
   width: 100%;
   float: left;
   position: relative;
-  //text-transform: uppercase;
+  text-transform: uppercase;
   letter-spacing: .5px;
   background: none;
   padding: 0;
@@ -12,7 +12,7 @@
   float: left;
   height: 50px;
   margin-right: 30px;
-  @include fontsizeEM(20);
+  font-size: 20px;
   line-height: 50px;
   font-weight: 600;
   color: #666;
@@ -45,7 +45,7 @@
 
 .menuzord-menu > li > .megamenu h5 {
   font-weight: 600;
-  @include fontsizeEM(14);
+  font-size: 14px;
   margin-bottom: 20px;
   padding-left: 10px;
 }
@@ -54,7 +54,7 @@
   padding: 8px 10px;
   width: 100%;
   display: inline-block;
-  @include fontsizeEM(12);
+  font-size: 12px;
 }
 
 .menuzord-menu a {
@@ -74,7 +74,7 @@
 .menuzord-menu > li > a {
   display: inline-block;
   text-decoration: none;
-  @include fontsizeEM(18);
+  font-size: 13px;
   font-weight: normal;
   outline: 0;
   -webkit-tap-highlight-color: transparent;
@@ -109,7 +109,7 @@
   clear: both;
   width: 100%;
   border: 0;
-  @include fontsizeEM(12);
+  font-size: 12px;
   position: relative
 }
 
@@ -148,7 +148,7 @@
   position: absolute;
   top: 8px;
   right: 10px;
-  @include fontsizeEM(15);
+  font-size: 15px
 }
 
 .menuzord-menu > li > .megamenu {
@@ -283,7 +283,7 @@
 
 .menuzord-menu > li > a > .fa {
   margin: 0 5px 0 0;
-  @include fontsizeEM(14);
+  font-size: 14px;
   float: left;
   line-height: inherit;
   color: inherit;
@@ -311,7 +311,7 @@
   width: 100%;
   padding: 7px 16px;
   float: left;
-  @include fontsizeEM(13);
+  font-size: 13px;
   text-decoration: none;
   color: #666;
   border: 1px solid #f0f0f0;
@@ -329,7 +329,7 @@
   padding: 20px;
   float: right;
   display: none;
-  @include fontsizeEM(13);
+  font-size: 13px;
   border: 1px solid #f0f0f0
 }
 

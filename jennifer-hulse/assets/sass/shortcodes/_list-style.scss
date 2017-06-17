@@ -16,7 +16,7 @@
 .circle-list li:before {
     content:"\f10c";
     font-family: 'fontawesome';
-    @include fontsizeEM(14);
+    font-size: 14px;
     float: left;
     padding-right: 10px;
     color: #757575;

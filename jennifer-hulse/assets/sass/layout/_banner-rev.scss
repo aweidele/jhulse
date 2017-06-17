@@ -38,12 +38,12 @@
   /*font-family: 'Abel', sans-serif;*/
   text-transform: uppercase;
   color: #555;
-  @include fontsizeEM(20);
+  font-size: 20px;
   letter-spacing: 6px;
 }
 
 .rev-desc {
-  @include fontsizeEM(16);
+  font-size: 16px;
   color: #454545;
   line-height: 26px;
 }

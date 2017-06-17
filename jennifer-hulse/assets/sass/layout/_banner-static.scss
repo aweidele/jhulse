@@ -43,7 +43,7 @@
 .banner-box h1,
 .banner-title h1 {
   letter-spacing: 5px;
-  @include fontsizeEM(60);
+  font-size:60px;
   font-weight: 300;
   line-height: normal;
 }
@@ -51,7 +51,7 @@
 .banner-box h3,
 .banner-title h3 {
   letter-spacing: 6px;
-  @include fontsizeEM(20);
+  font-size:20px;
 }
 
 .banner-title.light-txt h1,
@@ -71,7 +71,7 @@
 
 
 .b-lg-txt {
-  @include fontsizeEM(100,true);
+  font-size: 100px !important;
   font-weight: 300;
 }
 
@@ -94,7 +94,7 @@
   left: 50%;
   margin-left: -11px;
   text-transform: uppercase;
-  @include fontsizeEM(12);
+  font-size: 12px;
   color: #fff;
   z-index: 10;
 }

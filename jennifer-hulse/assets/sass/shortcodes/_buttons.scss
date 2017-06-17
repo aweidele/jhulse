@@ -4,24 +4,24 @@
 
 .btn-large {
     padding: 20px 40px;
-    @include fontsizeEM(16);
+    font-size: 16px;
 }
 
 .btn-medium {
     padding: 15px 30px;
-    @include fontsizeEM(14);
+    font-size: 14px;
     font-weight: normal;
 }
 
 .btn-small {
     padding: 10px 20px;
-    @include fontsizeEM(12);
+    font-size: 12px;
     font-weight: normal;
 }
 
 .btn-extra-small {
     padding: 5px 10px;
-    @include fontsizeEM(11);
+    font-size: 11px;
     font-weight: normal;
 }
 

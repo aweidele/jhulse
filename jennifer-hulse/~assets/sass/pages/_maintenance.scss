@@ -1,0 +1,7 @@
+.maintenance-banner {
+  background: #ededed;
+}
+
+.maintenance-banner p {
+  @include fontsizeEM(16);
+}

@@ -1,15 +1,9 @@
-@import "px2em";
-
-html {
-	font-size: #{$basefont}px;
-}
-
 body {
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.5;
   color: #323232;
-	font-size: #{$basefont}px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -83,7 +77,7 @@ pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 30px;
-  @include fontsizeEM(13);
+  font-size: 13px;
   line-height: 1.42857143;
   color: #333;
   word-break: break-all;

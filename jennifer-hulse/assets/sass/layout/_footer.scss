@@ -8,14 +8,14 @@
 }
 
 #footer.gray  .sub-title {
-    @include fontsizeEM(12);
+    font-size: 12px;
     color: #222;
     letter-spacing: 2px;
     margin: 15px 0;
 }
 
 #footer.dark  .sub-title {
-    @include fontsizeEM(12);
+    font-size: 12px;
     color: #ffffff;
     letter-spacing: 2px;
     margin: 15px 0;
@@ -23,14 +23,14 @@
 
 #footer.gray  .social-link  a {
     display: inline-block;
-    @include fontsizeEM(20);
+    font-size: 20px;
     color: #222;
     margin: 10px;
 }
 
 #footer.dark  .social-link  a {
     display: inline-block;
-    @include fontsizeEM(20);
+    font-size: 20px;
     color: #ffffff;
     margin: 5px;
 }
@@ -66,19 +66,19 @@
 }
 
 #footer.gray  .copyright {
-    @include fontsizeEM(14);
+    font-size: 14px;
     color: #000;
     letter-spacing: 2px;
 }
 
 #footer.dark  .copyright {
-    @include fontsizeEM(14);
+    font-size: 14px;
     color: #fff;
     letter-spacing: 2px;
 }
 
 #footer.gray  .copyright-sub-title {
-    @include fontsizeEM(12);
+    font-size: 12px;
     letter-spacing: 2px;
 }
 
@@ -153,7 +153,7 @@
 
 #footer.dark .secondary-footer .social-link  a {
     display: inline-block;
-    @include fontsizeEM(20);
+    font-size: 20px;
     color: #5a5a5a;
     margin:0 0 0 15px;
 }
@@ -208,7 +208,7 @@
 
 .footer-4.dark .social-link  a {
     display: inline-block;
-    @include fontsizeEM(20);
+    font-size: 20px;
     color: #fff;
     margin: 10px;
 }
@@ -229,13 +229,13 @@
 }
 
 .footer-4.dark  .copyright {
-    @include fontsizeEM(14);
+    font-size: 14px;
     color: #fff;
     letter-spacing: 2px;
 }
 
 .footer-4.dark  .copyright-sub-title {
-    @include fontsizeEM(12);
+    font-size: 12px;
     letter-spacing: 2px;
     color: #d0d0d0;
 }
