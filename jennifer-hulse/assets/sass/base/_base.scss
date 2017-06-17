@@ -1,5 +1,9 @@
 @import "px2em";
 
+html {
+	font-size: #{$basefont}px;
+}
+
 body {
   font-family: 'Josefin Slab', serif;
   line-height: 1.5;

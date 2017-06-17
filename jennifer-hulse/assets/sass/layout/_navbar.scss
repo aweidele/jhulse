@@ -2,7 +2,7 @@
   width: 100%;
   float: left;
   position: relative;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   letter-spacing: .5px;
   background: none;
   padding: 0;
@@ -74,7 +74,7 @@
 .menuzord-menu > li > a {
   display: inline-block;
   text-decoration: none;
-  @include fontsizeEM(13);
+  @include fontsizeEM(18);
   font-weight: normal;
   outline: 0;
   -webkit-tap-highlight-color: transparent;
