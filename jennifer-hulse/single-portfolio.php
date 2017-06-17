@@ -1,4 +1,19 @@
 <?php get_header();
+
+
+$allPort = new WP_Query(array(
+	'post_type' => 'portfolio',
+));
+$allPortPosts = array();
+if($allPort->have_posts()) : while($allPort->have_posts()) : $allPort->the_post();
+	$allPortPosts[] = $post->ID;
+endwhile;
+endif;
+wp_reset_query();
+$currentKey = array_search($post->ID,$allPortPosts);
+$next = ($currentKey + 1 < sizeof($allPortPosts)) ? $allPortPosts[$currentKey + 1] : $allPortPosts[0];
+$prev = ($currentKey > 0) ? $allPortPosts[$currentKey - 1] : $allPortPosts[sizeof($allPortPosts) - 1];
+
 if(have_posts()) : while(have_posts()) : the_post();
 $gallery = get_field('gallery');
 ?>
@@ -24,19 +39,18 @@ $gallery = get_field('gallery');
         <!--body content start-->
         <section class="body-content">
 
-
             <div class="container">
                 <div class="row ">
-
                     <div class="col-md-12">
                         <div class="portfolio-nav-row">
                             <div class="portfolio-nav left">
-                                <a href="#"> <i class="fa fa-angle-left"></i>  <span>Prev </span>
-                                </a>
-                                <a href="#"><i class="fa fa-th-large"></i></a>
-                                <a href="#"><span>Next</span> <i class="fa fa-angle-right"></i></a>
+                                <a href="<?php echo get_permalink($prev); ?>"> <i class="fa fa-angle-left"></i>  <span>Prev </span></a>
+                                <a href="<?php echo get_home_url(); ?>"><i class="fa fa-th-large"></i></a>
+                                <a href="<?php echo get_permalink($next); ?>"><span>Next</span> <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
+
+<?php if(sizeof($gallery) > 1) { ?>
                         <div class="full-width">
                             <div class="post-slider post-img text-center">
                                 <ul class="slides">
@@ -50,8 +64,12 @@ $gallery = get_field('gallery');
                                 </ul>
                             </div>
                         </div>
+<?php } else if(sizeof($gallery) == 1) { ?>
+                        <div class="full-width">
+                            <img src="<?php echo $gallery[0]['sizes']['Portfolio Gallery']; ?>" alt="">
+                        </div>
+<?php } ?>
                     </div>
-
 
                     <div class="page-content">
                         <div class="col-md-7">
@@ -65,10 +83,8 @@ $gallery = get_field('gallery');
                         </div>
                         <div class="col-md-5">
                             <ul class="portfolio-meta m-bot-30">
-                                <li><span> Client </span> ThemeBucket</li>
-                                <li><span> Created by </span> John Doe</li>
-                                <li><span> Completed on </span> 1st June 2015</li>
-                                <li><span> Skills </span> HTML5 / PHP / CSS3</li>
+                                <li><span> Client </span> <?php echo get_field('client'); ?></li>
+                                <li><span> Completed on </span> <?php echo get_field('completed_date'); ?></li>
                                 <li><span> Share </span>
                                    <a href="#"><i class="fa fa-facebook"></i></a>
                                    <a href="#"><i class="fa fa-twitter"></i></a>
@@ -83,7 +99,7 @@ $gallery = get_field('gallery');
 
                 </div>
             </div>
-
+<?php /*
             <hr/>
 
             <div class="page-content">
@@ -210,7 +226,7 @@ $gallery = get_field('gallery');
                 </div>
             </div>
 
-
+ */ ?>
         </section>
         <!--body content end-->
 
