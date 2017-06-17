@@ -55,6 +55,15 @@
                             <li><a href="<?php echo get_permalink($item->object_id); ?>"><?php echo $item->title; ?></a>
 							</li>
 <?php } ?>
+                            <li class="nav-divider" aria-hidden="true"><a href="javascript:void(0)">|</a></li>
+                            <li>
+                                <a href="javascript:void(0)"><i class="fa fa-search"></i> Search</a>
+                                <div class="megamenu megamenu-quarter-width navbar-search">
+                                    <form role="searchform">
+                                        <input type="text" class="form-control" placeholder="Search Here">
+                                    </form>
+                                </div>
+                            </li>
                         </ul>
                         <!--mega menu end-->
 

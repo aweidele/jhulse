@@ -3,6 +3,25 @@
 get_header();
 if(have_posts()) : while(have_posts()) : the_post();
 ?>
+	<!--page title start-->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2><?php the_title(); ?></h2>
+                        <!-- ol class="breadcrumb">
+                            <li><a href="#">Home</a>
+                            </li>
+                            <li><a href="#">Shortcodes</a>
+                            </li>
+                            <li class="active">portfolio single gallery</li>
+                        </ol -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page title end-->
+
        <!--body content start-->
         <section class="body-content">
             <div class="page-content">
