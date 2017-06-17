@@ -40,7 +40,7 @@
                     <nav class="menuzord js-primary-navigation" role="navigation" aria-label="Primary Navigation">
 
                         <!--logo start-->
-                        <a href="index.html" class="logo-brand">
+                        <a href="<?php echo get_home_url(); ?>" class="logo-brand">
                             <img class="retina" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Massive">
                         </a>
                         <!--logo end-->
@@ -49,7 +49,7 @@
 <?php 
   $locations = get_nav_menu_locations();
   $primaryMenu = wp_get_nav_menu_items($locations['primary-menu']);
-  echo "<!-- ",print_r($primaryMenu)," -->";
+  //echo "<!-- ",print_r($primaryMenu)," -->";
 							foreach($primaryMenu as $i => $item) {
 								?>
                             <li><a href="<?php echo get_permalink($item->object_id); ?>"><?php echo $item->title; ?></a>
