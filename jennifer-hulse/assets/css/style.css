@@ -13,7 +13,7 @@
 @keyframes preloader-wave { 0% { transform: scale(0, 0); opacity: 0.5; }
   100% { transform: scale(1, 1); opacity: 0; } }
 /*============================================== Base ===============================================*/
-body { font-family: 'Source Sans Pro', sans-serif; line-height: 1.5; color: #323232; font-size: 15px; font-weight: 400; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; }
+body { font-family: 'Josefin Slab', serif; line-height: 1.5; color: #323232; font-size: 15px; font-weight: 400; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; }
 
 a:active, a:focus { outline: none !important; }
 
@@ -2089,3 +2089,22 @@ Table of contents
   .count-down .c-grid, .count-down-alt .c-grid { margin: 10px; } }
 /*============================================== CUSTOM CODE ===============================================*/
 .logo-brand img { width: 100%; height: auto; }
+
+.menuzord-menu > li > a, .portfolio-with-title .portfolio-title h4, .portfolio-with-title .portfolio-title h4 a { font-size: 21px; }
+
+p { font-size: 18px; }
+
+.menuzord-menu > li > a { text-transform: none; font-weight: 400; }
+
+.portfolio-filter li a { font-weight: 700; }
+
+.portfolio-with-title .portfolio-title h4, .portfolio-with-title .portfolio-title h4 a { text-transform: none; }
+
+.portfolio-meta li span { font-weight: 700; }
+
+.h2, h2 { font-size: 40px; }
+@media screen and (max-width: 768px) { .h2, h2 { font-size: 24px; } }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+
+.heading-title-side-border h4, .heading-title-side-border h5, .heading-title-side-border h6 { font-weight: 700; }

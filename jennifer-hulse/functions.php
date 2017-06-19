@@ -2,8 +2,8 @@
 
 /** ENQUEUE STYLES AND SCRIPES **/
 function themeEnqueue() {
-	//wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Josefin+Slab:400,400i,700,700i|Source+Sans+Pro:600,600i,900,900i' );
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Josefin+Slab:400,400i,600,600i,700,700i' );
+	//wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/assets/vendor/bootstrap/css/bootstrap.min.css' );
 	wp_enqueue_style( 'animate', get_template_directory_uri().'/assets/vendor/animate/animate.css' );
 	wp_enqueue_style( 'elastic', get_template_directory_uri().'/assets/vendor/elasic-slider/elastic.css' );
@@ -61,6 +61,8 @@ add_image_size('Hero Image',1920,99999);
 add_image_size('Homepage Portfolio',800,600,true);
 add_image_size('Homepage Portfolio SMall',350,263,true);
 add_image_size('About Gallery',501,405,true);
+add_image_size('Blog Listing',673,500,true);
+add_image_size('Blog Listing Sidebar',76,56,true);
 
 
 /*** THEME CUSTOMIZATION SETTINGS ***/

@@ -1,20 +1,12 @@
-<?php get_header(); ?>
-
-
+<?php get_header(); 
+$page_for_posts = get_post(get_option( 'page_for_posts' ));
+?>
         <!--page title start-->
         <section class="page-title">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 class="text-uppercase">portfolio title - 3 grid with gutter</h4>
-                        <span>Amazing Portfolio Demos</span>
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a>
-                            </li>
-                            <li><a href="#">Shortcodes</a>
-                            </li>
-                            <li class="active">Portfolio</li>
-                        </ol>
+                        <h2><?php echo $page_for_posts->post_title; ?></h2>
                     </div>
                 </div>
             </div>
@@ -22,231 +14,72 @@
         <!--page title end-->
 
         <!--body content start-->
-        <section class="body-content page-content">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-md-12">
+        <section class="body-content ">
 
-                        <div class="text-center">
-                            <ul class="portfolio-filter">
-                                <li class="active"><a href="#" data-filter="*"> All</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat1">printing</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat2">Web</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat3">illustration</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat4">media</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat5">crafts</a>
-                                </li>
-                            </ul>
+            <div class="page-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+<?php if(have_posts()) : while(have_posts()) : the_post(); 
+							$thumbnail = get_the_post_thumbnail($post->ID,'Blog Listing');
+							?>
+                            <!--classic image post-->
+                            <div class="blog-classic">
+                                <div class="date">
+                                    <?php echo get_the_date('j'); ?>
+                                    <span><?php echo strtoupper(get_the_date('M Y')); ?></span>
+                                </div>
+                                <div class="blog-post">
+<?php if($thumbnail != '') { ?>
+                                    <div class="full-width">
+                                        <a href="<?php echo get_the_permalink(); ?>"><?php echo $thumbnail; ?></a>
+                                    </div>
+<?php } ?>
+                                    <h4 class="text-uppercase"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                    <ul class="post-meta">
+                                        <li><i class="fa fa-user"></i>posted by <?php the_author_link(); ?>
+                                        </li>
+                                        <li><i class="fa fa-folder-open"></i>  <a href="#">lifestyle</a>, <a href="#">travel</a>, <a href="#">fashion</a>
+                                        </li>
+                                        <li><i class="fa fa-comments"></i>  <a href="#">4 comments</a>
+                                        </li>
+                                    </ul>
+                                    <p><?php the_excerpt(); ?></p>
+                                    <a href="<?php echo get_the_permalink(); ?>" class="btn btn-small btn-dark-solid  "> Continue Reading</a>
+                                </div>
+                            </div>
+                            <!--classic image post-->
+
+<?php endwhile; endif; ?>
+                            <!--pagination-->
+                            <div class="text-center">
+                                <ul class="pagination custom-pagination">
+                                    <li><a href="#">Prev</a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a>
+                                    </li>
+                                    <li><a href="#">2</a>
+                                    </li>
+                                    <li><a href="#">3</a>
+                                    </li>
+                                    <li><a href="#">4</a>
+                                    </li>
+                                    <li><a href="#">5</a>
+                                    </li>
+                                    <li><a href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--pagination-->
                         </div>
 
-                        <div class="portfolio portfolio-with-title col-3 gutter ">
-
-                            <div class="portfolio-item cat1 cat3 ">
-                                <div class="thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/01.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="assets/img/portfolio/01.jpg" class="popup-link" title="lightbox view"> <i class="icon-basic_magnifier"></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-title">
-                                    <h4><a href="assets/img/portfolio/01.jpg" class="popup-link" title="lightbox view">lightbox view</a></h4>
-                                    <p><a href="#">category 1</a> , <a href="#">category 3</a> 
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat2 cat4">
-                                <div class="thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/02.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="portfolio-single.html"> <i class="icon-basic_link"></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-title">
-                                    <h4><a href="portfolio-single.html">External link</a></h4>
-                                    <p><a href="#">category 2</a> , <a href="#">category 4</a> 
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat1 cat2">
-                                <div class="thumb">
-
-                                    <div class="portfolio-slider">
-                                        <ul class="slides">
-                                            <li>
-                                                <a href="assets/img/portfolio/07.jpg" title="Freshness Photo">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/07.jpg" alt="">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="assets/img/portfolio/07a.jpg" title="Awesome Lightbox">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/07a.jpg" alt="">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="assets/img/portfolio/07b.jpg" title="Massive UI Components">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/07b.jpg" alt="">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="assets/img/portfolio/07c.jpg" title="Amazing Theme">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/07c.jpg" alt="">
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="#"> <i class="icon-basic_magnifier"></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-title">
-                                    <h4><a href="#">lightbox Gallary</a></h4>
-                                    <p><a href="#">category 1</a> , <a href="#">category 2</a> 
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat1 cat4">
-                                <div class="thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/03.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a class="popup-vimeo" href="https://vimeo.com/45830194"> <i class="icon-arrows_keyboard_right"></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-title">
-                                    <h4><a class="popup-vimeo" href="https://vimeo.com/45830194" >Video lightbox</a></h4>
-                                    <p><a href="#">category 1</a> , <a href="#">category 4</a> 
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat2 cat4">
-                                <div class="thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/04.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="assets/img/portfolio/04.jpg" class="popup-link" title="lightbox view"> <i class="icon-basic_magnifier"></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-title">
-                                    <h4><a href="assets/img/portfolio/04.jpg" class="popup-link" title="lightbox view">lightbox view</a></h4>
-                                    <p><a href="#">category 2</a> , <a href="#">category 4</a> 
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat3 ">
-                                <div class="thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/05.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="portfolio-single.html"> <i class="icon-basic_link"></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-title">
-                                    <h4><a href="portfolio-single.html">External link</a></h4>
-                                    <p><a href="#">category 3</a> 
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat2 cat4 ">
-                                <div class="thumb">
-
-                                    <div class="portfolio-slider-alt">
-                                        <ul class="slides">
-                                            <li>
-                                                <a href="assets/img/portfolio/08.jpg" title="Freshness">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/08.jpg" alt="">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="assets/img/portfolio/08a.jpg" title="Massive">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/08a.jpg" alt="">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="assets/img/portfolio/08b.jpg" title="Bootstrap">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/08b.jpg" alt="">
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="#"> <i class="icon-basic_magnifier"></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-title">
-                                    <h4><a href="#">lightbox gallery</a></h4>
-                                    <p><a href="#">category 2</a> , <a href="#">category 4</a> 
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat1 cat4 cat3 cat5">
-                                <div class="thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/06.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="assets/img/portfolio/06.jpg" class="popup-link" title="lightbox view"> <i class="icon-basic_magnifier"></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-title">
-                                    <h4><a href="assets/img/portfolio/06.jpg" class="popup-link" title="lightbox view">lightbox view</a></h4>
-                                    <p><a href="#">category 1</a> , <a href="#">category 3</a> 
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item cat2 cat5">
-                                <div class="thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/09.jpg" alt="">
-                                    <div class="portfolio-hover">
-                                        <div class="action-btn">
-                                            <a href="assets/img/portfolio/09.jpg" class="popup-link" title="lightbox view"> <i class="icon-basic_magnifier"></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-title">
-                                    <h4><a href="assets/img/portfolio/09.jpg" class="popup-link" title="The Cleaner">lightbox view</a></h4>
-                                    <p><a href="#">category 2</a> , <a href="#">category 5</a> 
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
+<?php get_sidebar(); ?>
 
                     </div>
                 </div>
             </div>
+
+
         </section>
         <!--body content end-->
 

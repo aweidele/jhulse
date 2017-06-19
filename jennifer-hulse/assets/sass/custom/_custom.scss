@@ -1,4 +1,63 @@
 .logo-brand img {
 	width: 100%;
 	height: auto;
-} 
+}
+
+%fontsize21 { font-size: 21px; }
+%fontsize18 { font-size: 18px; }
+%fontsize16 { font-size: 16px; }
+
+.menuzord-menu {
+	> li { 
+		> a {
+			@extend %fontsize21;
+			text-transform: none;
+			font-weight: 400;
+		}
+	}
+}
+
+.portfolio-filter {
+	li {
+		a {
+			//@extend %fontsize16;
+			font-weight: 700;
+		} 
+	}
+}
+
+.portfolio-with-title {
+	.portfolio-title {
+		h4 {
+			@extend %fontsize21;
+			a {
+				@extend %fontsize21;
+			}
+			&,a { text-transform: none; }
+		}
+	}
+}
+
+
+.portfolio-meta li span {
+	font-weight: 700;
+}
+
+.h2,h2 {
+	font-size: 40px;
+	@media screen and (max-width: 768px) {
+		font-size: 24px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+p {
+	@extend %fontsize18;
+}
+
+.heading-title-side-border h4, .heading-title-side-border h5, .heading-title-side-border h6 {
+	font-weight: 700;
+}
