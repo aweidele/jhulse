@@ -14,7 +14,7 @@
  *
  * @see WP_Widget
  */
-class WP_Widget_Search extends WP_Widget {
+class jh_widget_Search extends WP_Widget {
 
 	/**
 	 * Sets up a new Search widget instance.

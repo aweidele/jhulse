@@ -226,12 +226,21 @@ function wpb_load_widget() {
 	
 	// Unregister Default Widgets in order to use custom widgets
 	unregister_widget( 'WP_Widget_Tag_Cloud' );
+	unregister_widget( 'WP_Widget_Categories' );
+	unregister_widget( 'WP_Widget_Recent_Posts' );
+	unregister_widget( 'WP_Widget_Search' );
 	
 	// Register widgets
 	register_widget( 'jh_widget_tag_cloud' );
+	register_widget( 'jh_widget_Categories' );
+	register_widget( 'jh_widget_Recent_Posts' );
+	register_widget( 'jh_widget_Search' );
 	register_widget( 'jh_widget_social' );
 }
 add_action( 'widgets_init', 'wpb_load_widget' );
+include_once('widgets/jh_widget_categories.php');
+include_once('widgets/jh_widget_recent_posts.php');
+include_once('widgets/jh_widget_search.php');
 include_once('widgets/jh_widget_tag_cloud.php');
 include_once('widgets/jh_widget_social.php');
 

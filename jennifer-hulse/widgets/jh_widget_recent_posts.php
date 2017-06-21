@@ -14,7 +14,7 @@
  *
  * @see WP_Widget
  */
-class WP_Widget_Recent_Posts extends WP_Widget {
+class jh_widget_Recent_Posts extends WP_Widget {
 
 	/**
 	 * Sets up a new Recent Posts widget instance.

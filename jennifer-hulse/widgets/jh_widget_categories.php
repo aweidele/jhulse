@@ -14,7 +14,7 @@
  *
  * @see WP_Widget
  */
-class WP_Widget_Categories extends WP_Widget {
+class jh_widget_Categories extends WP_Widget {
 
 	/**
 	 * Sets up a new Categories widget instance.
