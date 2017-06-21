@@ -53,6 +53,26 @@ $page_for_posts = get_post(get_option( 'page_for_posts' ));
 <?php endwhile; endif; ?>
                             <!--pagination-->
                             <div class="text-center">
+<?php
+								
+ global $wp_query;
+$big = 999999999; // need an unlikely integer
+
+$pages = paginate_links( array(
+	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+	'format' => '?paged=%#%',
+	'current' => max( 1, get_query_var('paged') ),
+	'total' => $wp_query->max_num_pages,
+	'type'         => 'list',
+	'prev_next'          => true,
+	'prev_text'          => __('Prev'),
+	'next_text'          => __('Next'),
+) );
+$find = array("<ul class='page-numbers'>","<li><span class='page-numbers current'>","</span>");
+$replace = array('<ul class="pagination custom-pagination">','<li class="active"><a href="#">','</a>');
+echo str_replace($find,$replace,$pages);
+/*
+?>
                                 <ul class="pagination custom-pagination">
                                     <li><a href="#">Prev</a>
                                     </li>
@@ -69,6 +89,7 @@ $page_for_posts = get_post(get_option( 'page_for_posts' ));
                                     <li><a href="#">Next</a>
                                     </li>
                                 </ul>
+*/ ?>
                             </div>
                             <!--pagination-->
                         </div>
@@ -78,7 +99,6 @@ $page_for_posts = get_post(get_option( 'page_for_posts' ));
                     </div>
                 </div>
             </div>
-
 
         </section>
         <!--body content end-->
