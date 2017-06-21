@@ -206,4 +206,33 @@ function register_post_types() {
 
 }
 
+/*** ADD SIDEBAR AND WIDGETS ***/
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Blog Slidebar',
+		'id'            => 'blog_sidebar',
+		'before_widget' => '<div class="widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="heading-title-alt text-left heading-border-bottom"><h6 class="text-uppercase">',
+		'after_title'   => '</h6></div>',
+	) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+// Register and load the widget
+function wpb_load_widget() {
+	
+	// Unregister Default Widgets in order to use custom widgets
+	unregister_widget( 'WP_Widget_Tag_Cloud' );
+	
+	// Register widgets
+	register_widget( 'jh_widget_tag_cloud' );
+	register_widget( 'jh_widget_social' );
+}
+add_action( 'widgets_init', 'wpb_load_widget' );
+include_once('widgets/jh_widget_tag_cloud.php');
+include_once('widgets/jh_widget_social.php');
+
 ?>

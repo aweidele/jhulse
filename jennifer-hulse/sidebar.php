@@ -1,6 +1,13 @@
 
                         <div class="col-md-4">
 
+<!-- THIS SHOULD BE THE START OF THE BLOG SIDEBAR WIDGET AREA -->
+<?php if ( is_active_sidebar( 'blog_sidebar' ) ) :
+  dynamic_sidebar( 'blog_sidebar' );
+endif; ?>
+<!-- THIS SHOULD BE THE END OF THE BLOG SIDEBAR WIDGET AREA -->
+<?php /*
+
                             <!--search widget-->
                             <div class="widget">
                                 <form class="form-inline form" role="form">
@@ -126,5 +133,5 @@
                                 </div>
                             </div>
                             <!--tags widget-->
-
+*/ ?>
                         </div>
