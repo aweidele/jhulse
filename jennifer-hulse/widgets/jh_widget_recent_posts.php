@@ -79,14 +79,22 @@ class jh_widget_Recent_Posts extends WP_Widget {
 		<?php if ( $title ) {
 			echo $args['before_title'] . $title . $args['after_title'];
 		} ?>
-		<ul>
-		<?php while ( $r->have_posts() ) : $r->the_post(); ?>
-			<li>
-				<a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a>
-			<?php if ( $show_date ) : ?>
-				<span class="post-date"><?php echo get_the_date(); ?></span>
-			<?php endif; ?>
-			</li>
+		<ul class="widget-latest-post">
+		<?php while ( $r->have_posts() ) : $r->the_post(); 
+			$thumbnail = get_the_post_thumbnail($post->ID,'Blog Listing Sidebar');
+		?>
+                                    <li>
+                                        <div class="thumb">
+<?php if($thumbnail != '') { ?>
+                                            <a href="<?php the_permalink(); ?>"><?php echo $thumbnail; ?></a>
+<?php } else { ?>							&nbsp;
+<?php } ?>
+                                        </div>
+                                        <div class="w-desk">
+                                            <a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a>
+                                            May 05, 2014
+                                        </div>
+                                    </li>
 		<?php endwhile; ?>
 		</ul>
 		<?php echo $args['after_widget']; ?>

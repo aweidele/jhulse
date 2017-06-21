@@ -100,7 +100,7 @@ class jh_widget_Categories extends WP_Widget {
 <?php
 		} else {
 ?>
-		<ul>
+		<ul class="widget-category">
 <?php
 		$cat_args['title_li'] = '';
 

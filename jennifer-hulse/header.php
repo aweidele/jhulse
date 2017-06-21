@@ -59,8 +59,8 @@
                             <li>
                                 <a href="javascript:void(0)"><i class="fa fa-search"></i> Search</a>
                                 <div class="megamenu megamenu-quarter-width navbar-search">
-                                    <form role="searchform">
-                                        <input type="text" class="form-control" placeholder="Search Here">
+                                    <form role="form" action="<?php echo get_home_url(); ?>">
+                                        <input type="text" name="s" id="s" class="form-control" placeholder="Search...">
                                     </form>
                                 </div>
                             </li>
