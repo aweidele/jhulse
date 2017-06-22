@@ -22,6 +22,7 @@ $page_for_posts = get_post(get_option( 'page_for_posts' ));
                         <div class="col-md-8">
 <?php if(have_posts()) : while(have_posts()) : the_post(); 
 							$thumbnail = get_the_post_thumbnail($post->ID,'Blog Listing');
+							$terms = wp_get_post_terms($post->ID,'category');
 							?>
                             <!--classic image post-->
                             <div class="blog-classic">
@@ -39,10 +40,13 @@ $page_for_posts = get_post(get_option( 'page_for_posts' ));
                                     <ul class="post-meta">
                                         <li><i class="fa fa-user"></i>posted by <?php the_author_link(); ?>
                                         </li>
-                                        <li><i class="fa fa-folder-open"></i>  <a href="#">lifestyle</a>, <a href="#">travel</a>, <a href="#">fashion</a>
+<?php if(sizeof($terms)) { ?>
+                                        <li><i class="fa fa-folder-open"></i>  <?php foreach($terms as $i => $cat) { ?>
+                                        	<a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name; ?></a><?php if($i < sizeof($terms) - 1) { echo ","; } } ?>
                                         </li>
-                                        <li><i class="fa fa-comments"></i>  <a href="#">4 comments</a>
-                                        </li>
+<?php } ?>
+                                        <!-- li><i class="fa fa-comments"></i>  <a href="#">4 comments</a>
+                                        </li -->
                                     </ul>
                                     <p><?php the_excerpt(); ?></p>
                                     <a href="<?php echo get_the_permalink(); ?>" class="btn btn-small btn-dark-solid  "> Continue Reading</a>
