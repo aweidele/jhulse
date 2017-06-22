@@ -1,3 +1,4 @@
+var $ = jQuery;
 ;(function () {
     "use strict";
 
@@ -33,7 +34,9 @@
         if (window.devicePixelRatio > 1) {
             $(".retina").imagesLoaded(function () {
                 $(".retina").each(function () {
-                    var src = $(this).attr("src").replace(".", "@2x.");
+					if($(this).attr("src").indexOf(".svg") <= 0) {
+                    	var src = $(this).attr("src").replace(".", "@2x.");
+					}
                     var h = $(this).height();
                     $(this).attr("src", src).css({height: h, width: "auto"});
                 });
