@@ -58,7 +58,7 @@ $page_for_posts = get_post(get_option( 'page_for_posts' ));
                             <!--pagination-->
                             <div class="text-center">
 <?php
-								
+if(!is_singular()) { 							
  global $wp_query;
 $big = 999999999; // need an unlikely integer
 
@@ -75,25 +75,8 @@ $pages = paginate_links( array(
 $find = array("<ul class='page-numbers'>","<li><span class='page-numbers current'>","</span>");
 $replace = array('<ul class="pagination custom-pagination">','<li class="active"><a href="#">','</a>');
 echo str_replace($find,$replace,$pages);
-/*
+}
 ?>
-                                <ul class="pagination custom-pagination">
-                                    <li><a href="#">Prev</a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a>
-                                    </li>
-                                    <li><a href="#">2</a>
-                                    </li>
-                                    <li><a href="#">3</a>
-                                    </li>
-                                    <li><a href="#">4</a>
-                                    </li>
-                                    <li><a href="#">5</a>
-                                    </li>
-                                    <li><a href="#">Next</a>
-                                    </li>
-                                </ul>
-*/ ?>
                             </div>
                             <!--pagination-->
                         </div>
