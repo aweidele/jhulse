@@ -1,6 +1,7 @@
 <?php 
 /* Template Name: Contact */ 
 get_header();
+echo "<pre>",print_r($_POST),"</pre>";
 if(have_posts()) : while(have_posts()) : the_post();
 ?>
 	<!--page title start-->
@@ -48,7 +49,7 @@ if(have_posts()) : while(have_posts()) : the_post();
                             <h4 class="text-uppercase"><?php echo get_field('contact_form_heading'); ?></h4>
                             <p><?php the_content(); ?></p>
 
-                            <form class="contact-comments m-top-50 js-Mailer" method="post">
+                            <form class="contact-comments m-top-50 js-Mailer" method="post" action="<?php echo get_template_directory_uri().'/mailer/mailer.php'; ?>">
 
                                 <div class="row">
 

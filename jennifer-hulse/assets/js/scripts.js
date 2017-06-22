@@ -551,7 +551,7 @@ var $ = jQuery;
                     "class": "alert js-Response",
                     "style": "margin-top: 20px; display:none"
                     });
-
+			
             if (!$form.data("isready")) {
                 $btn.after($response);
                 $form.data("isready", true);
@@ -563,7 +563,7 @@ var $ = jQuery;
             e.preventDefault();
 
             $.post(
-                "mailer/mailer.php",
+                $form.attr("action"),
                 $form.serialize()
             ).done(function(r) {
                 var $rHolder = $form.find(".js-Response");
