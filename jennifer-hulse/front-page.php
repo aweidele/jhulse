@@ -35,6 +35,9 @@
 							$allPort = new WP_Query(array(
 								'post_type' => 'portfolio',
 							));
+							
+							$tax = get_categories(array('taxonomy'=>'project_category'));
+										   echo "<pre>",print_r($tax),"</pre>";
 
 							if($allPort->have_posts()) : while($allPort->have_posts()) : $allPort->the_post();
 							$gallery = get_field('gallery');

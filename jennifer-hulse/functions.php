@@ -185,19 +185,19 @@ function register_post_types() {
 	
 	// Project Tags Taxonomy
     register_taxonomy(
-        'portfolio_tags',
+        'project_category',
         'portfolio',
         array(
             'labels' => array(
-                'name'              => _x( 'Project Tags' , 'taxonomy general name' ),
-                'singular_name'     => _x( 'Project Tag' , 'taxonomy singular name'),
-                'add_new_item' => 'Add Project Tag',
-                'new_item_name' => "New Project Tag"
+                'name'              => _x( 'Project Categories' , 'taxonomy general name' ),
+                'singular_name'     => _x( 'Project Category' , 'taxonomy singular name'),
+                'add_new_item' => 'Add Project Category',
+                'new_item_name' => "New Project Category"
             ),
             'show_ui' => true,
             'show_admin_column' => true,
             'show_tagcloud' => false,
-            'hierarchical' => false,
+            'hierarchical' => true,
             'support' => array('tags')
         )
     );
