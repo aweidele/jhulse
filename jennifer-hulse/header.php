@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Mosaddek">
+    <?php if(is_singular('portfolio')) { 
+		$gallery = get_field('gallery',$post->ID);
+	//echo "<!-- ",print_r($gallery)," -->";
+	?><meta property="og:image" content="<?php echo $gallery[0]['sizes']['Homepage Portfolio']; ?>" />
+<?php } ?>
+	<meta property="og:title" content="<?php wp_title ( ' | ', true,'right' ); echo get_bloginfo('name'); ?>" />
+	<meta property="og:url" content="<?php echo get_permalink(); ?>" />
 
     <!--favicon icon-->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">

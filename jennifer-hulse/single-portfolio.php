@@ -86,11 +86,13 @@ $gallery = get_field('gallery');
                                 <li><span> Client </span> <?php echo get_field('client'); ?></li>
                                 <li><span> Completed on </span> <?php echo get_field('completed_date'); ?></li>
                                 <li><span> Share </span>
-                                   <a href="#"><i class="fa fa-facebook"></i></a>
-                                   <a href="#"><i class="fa fa-twitter"></i></a>
-                                   <a href="#"><i class="fa fa-google-plus"></i></a>
-                                   <a href="#"><i class="fa fa-pinterest"></i></a>
-                                   <a href="#"><i class="fa fa-linkedin"></i></a>
+                                   <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                                   <a href="http://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>-<?php echo get_bloginfo('name'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+                                   <a href="//pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $post->guid; ?>&description=<?php 
+  echo get_bloginfo('name'); 
+  if(get_bloginfo('description') != "") { echo "–".get_bloginfo('description'); }
+          ?> | <?php the_title(); ?>. <?php echo get_option( 'meta_description', '' ); ?>" data-pin-do="buttonPin" data-pin-config="none" target="_blank"><i class="fa fa-pinterest"></i></a>
+                                   <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
                                 </li>
                             </ul>
 

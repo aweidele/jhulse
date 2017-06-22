@@ -62,8 +62,8 @@
                                 </div>
                                 <div class="portfolio-title">
                                     <h4><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
-                                    <p><a href="#">category 2</a> , <a href="#">category 4</a> 
-                                    </p>
+                                    <p><?php foreach($terms as $i => $cat) { ?>
+                                      <a href="#"><?php echo $cat->name; ?></a><?php if($i < sizeof($terms) - 1) { echo ","; } } ?></p>
                                 </div>
                             </div>
 <?php
