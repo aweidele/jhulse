@@ -83,8 +83,11 @@ $gallery = get_field('gallery');
                         </div>
                         <div class="col-md-5">
                             <ul class="portfolio-meta m-bot-30">
+<?php if(get_field('client') != '') { ?>
                                 <li><span> Client </span> <?php echo get_field('client'); ?></li>
+<?php } if(get_field('completed_date') != '') { ?>
                                 <li><span> Completed on </span> <?php echo get_field('completed_date'); ?></li>
+<?php } ?>
                                 <li><span> Share </span>
                                    <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
                                    <a href="http://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>-<?php echo get_bloginfo('name'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
