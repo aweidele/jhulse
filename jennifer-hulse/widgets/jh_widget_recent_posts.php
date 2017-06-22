@@ -92,7 +92,7 @@ class jh_widget_Recent_Posts extends WP_Widget {
                                         </div>
                                         <div class="w-desk">
                                             <a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a>
-                                            May 05, 2014
+                                            <?php echo get_the_date('F j, Y'); ?>
                                         </div>
                                     </li>
 		<?php endwhile; ?>
