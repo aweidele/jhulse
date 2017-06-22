@@ -1,7 +1,6 @@
 <?php 
 /* Template Name: Contact */ 
 get_header();
-echo "<pre>",print_r($_POST),"</pre>";
 if(have_posts()) : while(have_posts()) : the_post();
 ?>
 	<!--page title start-->

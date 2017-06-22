@@ -41,7 +41,7 @@ class MassiveMailer
     {
         $template = $this->createTemplate();
 
-        $this->mailer->setFrom($this->config['from_email'], $this->config['from_name']);
+        $this->mailer->setFrom($_POST['email'], $_POST['name']);
         $this->mailer->addAddress($this->config['to_email'], $this->config['to_name']);
         $this->mailer->Subject = $this->config['subject'];
         $this->mailer->Body    = $template;

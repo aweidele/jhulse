@@ -61,3 +61,7 @@ p {
 .heading-title-side-border h4, .heading-title-side-border h5, .heading-title-side-border h6 {
 	font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+	.banner-state { display: none; }
+}
