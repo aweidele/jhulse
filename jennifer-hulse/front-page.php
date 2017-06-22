@@ -1,5 +1,6 @@
 <?php get_header(); 
 	$hero = get_field('hero_image',$post->ID);
+	$tax = get_categories(array('taxonomy'=>'project_category'));
 ?>
         <!--hero section-->
         <div class="banner-state text-center vertical-align height-600" style="background-image: url(<?php echo $hero['sizes']['Hero Image']; ?>)">
@@ -15,18 +16,10 @@
 
                         <div class="text-center">
                             <ul class="portfolio-filter">
-                                <li class="active"><a href="#" data-filter="*"> All</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat1">printing</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat2">Web</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat3">illustration</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat4">media</a>
-                                </li>
-                                <li><a href="#" data-filter=".cat5">crafts</a>
-                                </li>
+                                <li class="active"><a href="#" data-filter="*"> All</a></li>
+<?php foreach($tax as $cat) { ?>
+                                <li><a href="#" data-filter=".cat-<?php echo $cat->slug; ?>"><?php echo $cat->name; ?></a></li>
+<?php } ?>
                             </ul>
                         </div>
 
@@ -35,9 +28,6 @@
 							$allPort = new WP_Query(array(
 								'post_type' => 'portfolio',
 							));
-							
-							$tax = get_categories(array('taxonomy'=>'project_category'));
-										   echo "<pre>",print_r($tax),"</pre>";
 
 							if($allPort->have_posts()) : while($allPort->have_posts()) : $allPort->the_post();
 							$gallery = get_field('gallery');
