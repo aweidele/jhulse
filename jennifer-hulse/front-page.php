@@ -31,9 +31,10 @@
 
 							if($allPort->have_posts()) : while($allPort->have_posts()) : $allPort->the_post();
 							$gallery = get_field('gallery');
+							$terms = wp_get_post_terms($post->ID,'project_category');
 							if(sizeof($gallery)) {
 ?>
-                            <div class="portfolio-item cat1 cat3 ">
+                            <div class="portfolio-item<?php foreach($terms as $cat) { echo " cat-".$cat->slug; } ?>">
                                 <div class="thumb">
 <?php if(sizeof($gallery) == 1) { ?>
                                     <img src="<?php echo $gallery[0]['sizes']['Homepage Portfolio']; ?>" alt="">
