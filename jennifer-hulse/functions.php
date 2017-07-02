@@ -77,6 +77,7 @@ function mytheme_customize_register( $wp_customize ) {
 	// ADD OPTIONS
 	$wp_customize->add_setting( 'theme_logo'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_copyright'    , array('transport' => 'refresh','type' => 'option'));
+	$wp_customize->add_setting( 'theme_showsearch'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_facebook'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_twitter'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_instagram'    , array('transport' => 'refresh','type' => 'option'));
@@ -98,6 +99,11 @@ function mytheme_customize_register( $wp_customize ) {
 		'label'        => __( 'Copyright info', 'mytheme' ),
 		'section'    => 'title_tagline',
 		'settings'   => 'theme_copyright',
+  	) ) );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_showsearch', array(
+		'label'        => __( 'Show search in menu', 'mytheme' ),
+		'section'    => 'title_tagline',
+		'settings'   => 'theme_showsearch',
   	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_facebook', array(
 		'label'        => __( 'Facebook', 'mytheme' ),

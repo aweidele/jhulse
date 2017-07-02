@@ -69,7 +69,7 @@
                             <li><a href="<?php echo get_permalink($item->object_id); ?>"><?php echo $item->title; ?></a>
 							</li>
 <?php } ?>
-                            <li class="nav-divider" aria-hidden="true"><a href="javascript:void(0)">|</a></li>
+                            <!-- li class="nav-divider" aria-hidden="true"><a href="javascript:void(0)">|</a></li>
                             <li>
                                 <a href="javascript:void(0)"><i class="fa fa-search"></i> Search</a>
                                 <div class="megamenu megamenu-quarter-width navbar-search">
@@ -77,7 +77,7 @@
                                         <input type="text" name="s" id="s" class="form-control" placeholder="Search...">
                                     </form>
                                 </div>
-                            </li>
+                            </li -->
                         </ul>
                         <!--mega menu end-->
 
