@@ -25,3 +25,4 @@ a, .menuzord-menu > li.active > a, .menuzord-menu > li:hover > a, .portfolio-wit
 @media (min-width: 768px) { .c-nav_s-underline.menuzord-menu > li.active > a, .c-nav_s-underline.menuzord-menu > li:hover > a { border-bottom: 1px solid #f9333f; }
   .c-nav_s-outline.menuzord-menu > li.active > a, .c-nav_s-outline.menuzord-menu > li:hover > a { border: 1px solid #f9333f; }
   .c-nav_s-bg.menuzord-menu > li.active > a, .c-nav_s-bg.menuzord-menu > li:hover > a { background: #f9333f; } }
+.page-title h1, .page-title h2, .page-title h3, .page-title h4, .page-title h5 { color: #f9333f; }
