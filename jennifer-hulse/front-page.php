@@ -1,6 +1,6 @@
 <?php get_header(); 
 	$hero = get_field('hero_image',$post->ID);
-	$tax = get_categories(array('taxonomy'=>'project_category'));
+	//$tax = get_categories(array('taxonomy'=>'project_category'));
 ?>
         <!--hero section-->
         <div class="banner-state text-center vertical-align height-600" style="background-image: url(<?php echo $hero['sizes']['Hero Image']; ?>)">
@@ -12,15 +12,16 @@
         <section class="body-content page-content">
             <div class="container">
                 <div class="row ">
-                    <div class="col-md-12">
 
+                    <div class="col-md-12 ">
+                        <div class="text-center m-bot-100">
+<?php echo wpautop($post->post_content); ?>
+                        </div>
+                    </div>
+					
+                    <div class="col-md-12">
                         <div class="text-center">
-                            <ul class="portfolio-filter">
-                                <li class="active"><a href="#" data-filter="*"> All</a></li>
-<?php foreach($tax as $cat) { ?>
-                                <li><a href="#" data-filter=".cat-<?php echo $cat->slug; ?>"><?php echo $cat->name; ?></a></li>
-<?php } ?>
-                            </ul>
+							<h3>Portfolio</h3>
                         </div>
 
                         <div class="portfolio portfolio-with-title col-3 gutter ">
@@ -44,7 +45,7 @@
                                            <?php foreach($gallery as $image) { ?>
                                            
                                             <li>
-                                                <a href="assets/img/portfolio/07.jpg" title="Freshness Photo">
+                                                <a href="<?php echo $image['url']; ?>" title="Freshness Photo">
                                                     <img src="<?php echo $image['sizes']['Homepage Portfolio']; ?>" alt="">
                                                 </a>
                                             </li>
