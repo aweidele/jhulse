@@ -1,8 +1,8 @@
 <?php 
 get_header();
 if(have_posts()) : while(have_posts()) : the_post();
-//$gallery = get_field('gallery');
-?>
+	$content = $post->post_content; ?>
+
 	<!--page title start-->
         <section class="page-title">
             <div class="container">
@@ -21,7 +21,24 @@ if(have_posts()) : while(have_posts()) : the_post();
             </div>
         </section>
         <!--page title end-->
-        
+
+<?php if($content) { ?>
+        <section class="body-content page-content">
+            <div class="container">
+                <div class="row ">
+
+                    <div class="col-md-12 ">
+                        <div class="text-center m-bot-100">
+<?php echo wpautop($content); ?>
+                        </div>
+                    </div>
+                    
+				</div>
+			</div>
+		</section>
+<?php } ?>
+
+
 <?php 
 additional_content(get_field('additional_content'));
 endwhile;

@@ -1,5 +1,5 @@
 
-             <div class="page-content">
+            <section class="body-content page-content">
                 <div class="container">
                     <div class="row">
 
@@ -28,4 +28,4 @@
                     </div>
                     <!--feature box outline end-->
                 </div>
-            </div>
+            </section>
