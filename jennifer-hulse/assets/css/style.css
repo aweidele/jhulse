@@ -1309,31 +1309,31 @@ comments-list
 .typist-mark > .selectedText { color: #fff; background-color: #222; font-style: normal; }
 
 /*============================================== Footer ===============================================*/
-#footer.gray { background: #f5f5f5; padding: 80px 0; }
+#footer.gray, #footer.med { background: #f5f5f5; padding: 80px 0; }
 
 #footer.dark { background: #222; }
 
-#footer.gray .sub-title { font-size: 12px; color: #222; letter-spacing: 2px; margin: 15px 0; }
+#footer.gray .sub-title, #footer.med .sub-title { font-size: 12px; color: #222; letter-spacing: 2px; margin: 15px 0; }
 
 #footer.dark .sub-title { font-size: 12px; color: #ffffff; letter-spacing: 2px; margin: 15px 0; }
 
-#footer.gray .social-link a { display: inline-block; font-size: 20px; color: #222; margin: 10px; }
+#footer.gray .social-link a, #footer.med .social-link a { display: inline-block; font-size: 20px; color: #222; margin: 10px; }
 
 #footer.dark .social-link a { display: inline-block; font-size: 20px; color: #ffffff; margin: 5px; }
 
-#footer.gray .social-link.circle a { border: 1px solid #222; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; text-align: center; }
+#footer.gray .social-link.circle a, #footer.med .social-link.circle a { border: 1px solid #222; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; text-align: center; }
 
 #footer.dark .social-link.circle a { border: 1px solid #fff; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; text-align: center; }
 
-#footer.gray .social-link.circle a:hover { background: #222; color: #fff; border: 1px solid transparent; }
+#footer.gray .social-link.circle a:hover, #footer.med .social-link.circle a:hover { background: #222; color: #fff; border: 1px solid transparent; }
 
 #footer.dark .social-link.circle a:hover { background: #fff; color: #222; border: 1px solid transparent; }
 
-#footer.gray .copyright { font-size: 14px; color: #000; letter-spacing: 2px; }
+#footer.gray .copyright, #footer.med .copyright { font-size: 14px; color: #000; letter-spacing: 2px; }
 
 #footer.dark .copyright { font-size: 14px; color: #fff; letter-spacing: 2px; }
 
-#footer.gray .copyright-sub-title { font-size: 12px; letter-spacing: 2px; }
+#footer.gray .copyright-sub-title, #footer.med .copyright-sub-title { font-size: 12px; letter-spacing: 2px; }
 
 .footer-logo { display: block; }
 
@@ -2112,3 +2112,4 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 .heading-title-side-border h4, .heading-title-side-border h5, .heading-title-side-border h6 { font-weight: 700; }
 
 @media screen and (max-width: 768px) { .banner-state { display: none; } }
+#footer.med { background-color: #bbbbbb; }

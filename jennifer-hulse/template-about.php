@@ -55,6 +55,7 @@ $gallery = get_field('gallery');
         </section>
         <!--body content end-->
 <?php 
+additional_content(get_field('additional_content'));
 endwhile;
 endif;
 get_footer(); ?>

@@ -1,5 +1,5 @@
         <!--footer start 1-->
-        <footer id="footer" class="dark">
+        <footer id="footer" class="gray">
 <?php /*
             <div class="primary-footer">
                 <div class="container">

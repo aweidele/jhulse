@@ -247,4 +247,16 @@ include_once('widgets/jh_widget_recent_posts.php');
 include_once('widgets/jh_widget_tag_cloud.php');
 include_once('widgets/jh_widget_social.php');
 
+function additional_content($additional_content) {
+	if(is_array($additional_content)) {
+		foreach($additional_content as $block) {
+			switch($block['acf_fc_layout']) {
+				case 'text_section':
+					include('additional_content/jh_text.php');
+					break;
+			}
+		}
+	}
+}
+
 ?>

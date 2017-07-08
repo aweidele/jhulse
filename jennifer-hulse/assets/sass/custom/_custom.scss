@@ -69,3 +69,8 @@ p {
 @media screen and (max-width: 768px) {
 	.banner-state { display: none; }
 }
+
+#footer.med {
+	@extend #footer.gray;
+	background-color: #bbbbbb;
+}
