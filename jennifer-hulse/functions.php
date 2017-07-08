@@ -254,6 +254,9 @@ function additional_content($additional_content) {
 				case 'text_section':
 					include('additional_content/jh_text.php');
 					break;
+				case 'services':
+					include('additional_content/jh_services.php');
+					break;
 			}
 		}
 	}
