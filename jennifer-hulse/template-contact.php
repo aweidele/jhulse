@@ -1,5 +1,5 @@
-<?php 
-/* Template Name: Contact */ 
+<?php
+/* Template Name: Contact */
 get_header();
 if(have_posts()) : while(have_posts()) : the_post();
 ?>
@@ -53,33 +53,33 @@ if(have_posts()) : while(have_posts()) : the_post();
                                 <div class="row">
 
                                     <div class="col-md-6 form-group">
-                                        <label for="form-field-name">Name *</label>
+                                        <label for="form-field-name"><?php echo get_field('form_label_name'); ?> *</label>
                                         <!-- Name -->
                                         <input type="text" name="name" id="form-field-name" class="form-control" maxlength="100" required data-error="You must enter name">
                                         <div class="help-block with-errors"></div>
                                     </div>
 
                                     <div class="col-md-6 form-group">
-                                        <label for="form-field-email">Email *</label>
+                                        <label for="form-field-email"><?php echo get_field('form_label_email'); ?> *</label>
                                         <!-- Email -->
                                         <input type="email" name="email" id="form-field-email" class="form-control" maxlength="100" required data-error="Invalid email address!">
                                         <div class="help-block with-errors"></div>
                                     </div>
 
                                     <div class="form-group col-md-6">
-                                        <label for="form-field-phone">Phone</label>
+                                        <label for="form-field-phone"><?php echo get_field('form_label_phone'); ?></label>
                                         <!-- Phone -->
                                         <input type="text" name="phone" id="form-field-phone" class="form-control" maxlength="100">
                                     </div>
 
                                     <div class="form-group col-md-6">
-                                        <label for="form-field-subject">Subject</label>
+                                        <label for="form-field-subject"><?php echo get_field('form_label_subject'); ?></label>
                                         <!-- Subject -->
                                         <input type="text" name="subject" id="form-field-subject" class="form-control" maxlength="100">
                                     </div>
 
                                     <div class="form-group col-md-12">
-                                        <label for="form-field-comments">Comments</label>
+                                        <label for="form-field-comments"><?php echo get_field('form_label_message'); ?></label>
                                         <!-- Comment -->
                                         <textarea name="comments" id="form-field-comments" class="cmnt-text form-control" rows="6" maxlength="400"></textarea>
                                     </div>
@@ -102,7 +102,7 @@ if(have_posts()) : while(have_posts()) : the_post();
             </div>
         </section>
         <!--body content end-->
-<?php 
+<?php
 endwhile;
 endif;
 get_footer(); ?>
