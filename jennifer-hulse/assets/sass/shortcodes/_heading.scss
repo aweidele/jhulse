@@ -13,7 +13,7 @@
 
 .heading-title span,
 .heading-title-alt span {
-    color: #7e7e7e;
+    color: $txt_gray;
     /*font-family: 'Abel', sans-serif;*/
     font-size: 14px;
     letter-spacing: 2px;
@@ -199,5 +199,5 @@
     margin: 0 auto;
     display: inline-block;
     line-height: 25px;
-    color: #7e7e7e;
+    color: $txt_gray;
 }

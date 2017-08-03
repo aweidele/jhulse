@@ -33,7 +33,7 @@ a, .btn { -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: a
 
 a img, iframe { border: none; }
 
-p { margin: 0 0 30px; line-height: 30px; color: #7e7e7e; }
+p { margin: 0 0 30px; line-height: 30px; color: #5d5d5d; }
 
 hr { margin-top: 0px; margin-bottom: 0px; border: 0; border-top: 1px solid #eee; }
 
@@ -530,7 +530,7 @@ pre { display: block; padding: 9.5px; margin: 0 0 30px; font-size: 13px; line-he
 
 .no-touch #cd-vertical-nav .cd-dot { position: relative; /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/ top: 11px; height: 12px; width: 12px; border-radius: 50%; background-color: #ababab; transition: transform 0.2s, background-color 0.5s; transform-origin: 50% 50%; }
 
-.no-touch #cd-vertical-nav .cd-label { position: relative; margin-right: 10px; padding: .4em .5em; color: #7e7e7e; font-size: 14px; transition: transform 0.2s, opacity 0.2s; opacity: 0; transform-origin: 100% 50%; }
+.no-touch #cd-vertical-nav .cd-label { position: relative; margin-right: 10px; padding: .4em .5em; color: #5d5d5d; font-size: 14px; transition: transform 0.2s, opacity 0.2s; opacity: 0; transform-origin: 100% 50%; }
 
 /* Touch devices */
 .touch #cd-vertical-nav { position: fixed; z-index: 1; right: 5%; bottom: 30px; width: 90%; max-width: 400px; max-height: 90%; overflow-y: scroll; transform-origin: right bottom; transform: scale(0); transition-property: transform; transition-duration: 0.2s; border-radius: 0.25em; background-color: rgba(255, 255, 255, 0.9); }
@@ -539,7 +539,7 @@ pre { display: block; padding: 9.5px; margin: 0 0 30px; font-size: 13px; line-he
 
 .touch #cd-vertical-nav a span:first-child { display: none; }
 
-.touch #cd-vertical-nav a.is-selected span:last-child { color: #7e7e7e; }
+.touch #cd-vertical-nav a.is-selected span:last-child { color: #5d5d5d; }
 
 .touch #cd-vertical-nav.open { transform: scale(1); }
 
@@ -642,7 +642,7 @@ body { overflow-x: hidden; }
 /*============================================== Breadcrumb ===============================================*/
 .breadcrumb li { text-transform: uppercase; }
 
-.breadcrumb li > a { color: #7e7e7e; }
+.breadcrumb li > a { color: #5d5d5d; }
 
 .breadcrumb li > a:hover { color: #222; }
 
@@ -756,7 +756,7 @@ body { overflow-x: hidden; }
 
 .portfolio-with-title .portfolio-title h3, .portfolio-with-title .portfolio-title h3 a { margin: 0 0 10px 0; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; color: #222222; }
 
-.portfolio-with-title .portfolio-title p { margin: 0; font-size: 12px; text-transform: uppercase; /*font-family: 'Abel', sans-serif;*/ font-weight: normal; letter-spacing: 1px; color: #7e7e7e; }
+.portfolio-with-title .portfolio-title p { margin: 0; font-size: 12px; text-transform: uppercase; /*font-family: 'Abel', sans-serif;*/ font-weight: normal; letter-spacing: 1px; color: #5d5d5d; }
 
 .portfolio-with-title.portfolio-masonry .portfolio-title { padding: 15px; }
 
@@ -1459,7 +1459,7 @@ comments-list
 
 .contact-comments .cmnt-text { height: 95px; }
 
-.contact-comments label { font-weight: normal; text-transform: uppercase; color: #7e7e7e; }
+.contact-comments label { font-weight: normal; text-transform: uppercase; color: #5d5d5d; }
 
 address p { margin-bottom: 0px; }
 
