@@ -14,7 +14,7 @@
                 <div class="row ">
 
                     <div class="col-md-12 ">
-                        <div class="text-center m-bot-100">
+                        <div class="text-center m-bot-100 about-me">
 <?php echo wpautop($post->post_content); ?>
                         </div>
                     </div>

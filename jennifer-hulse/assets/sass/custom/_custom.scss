@@ -70,6 +70,13 @@ p {
 	display: block;
 }
 
+.about-me {
+	p {
+		color: $theme-color-magenta;
+		font-size: 24px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.banner-state { display: none; }
 }
