@@ -66,6 +66,10 @@ p {
 	font-weight: 700;
 }
 
+.m-bot-100 {
+	display: block;
+}
+
 @media screen and (max-width: 768px) {
 	.banner-state { display: none; }
 }
@@ -74,3 +78,4 @@ p {
 	@extend #footer.gray;
 	background-color: #bbbbbb;
 }
+
