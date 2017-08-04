@@ -26,11 +26,7 @@
 
                         <div class="portfolio portfolio-with-title col-3 gutter ">
 <?php
-							$allPort = new WP_Query(array(
-								'post_type' => 'portfolio',
-							));
-
-							if($allPort->have_posts()) : while($allPort->have_posts()) : $allPort->the_post();
+							if(have_posts()) : while(have_posts()) : the_post();
 							$gallery = get_field('gallery');
 							$terms = wp_get_post_terms($post->ID,'project_category');
 							if(sizeof($gallery)) {
