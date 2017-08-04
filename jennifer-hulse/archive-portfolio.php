@@ -1,19 +1,28 @@
 <?php get_header(); ?>
+<!--page title start-->
+			<section class="page-title">
+					<div class="container">
+							<div class="row">
+									<div class="col-md-12">
+											<h2><?php the_title(); ?></h2>
+											<!-- ol class="breadcrumb">
+													<li><a href="#">Home</a>
+													</li>
+													<li><a href="#">Shortcodes</a>
+													</li>
+													<li class="active">portfolio single gallery</li>
+											</ol -->
+									</div>
+							</div>
+					</div>
+			</section>
+			<!--page title end-->
                 <!--body content start-->
         <section class="body-content page-content">
             <div class="container">
                 <div class="row ">
 
-                    <div class="col-md-12 ">
-                        <div class="text-center m-bot-100 about-me">
-<?php echo wpautop($post->post_content); ?>
-                        </div>
-                    </div>
-
                     <div class="col-md-12">
-                        <div class="text-center">
-							<h3>Portfolio</h3>
-                        </div>
 
                         <div class="portfolio portfolio-with-title col-3 gutter ">
 <?php
