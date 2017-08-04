@@ -4,7 +4,7 @@
 					<div class="container">
 							<div class="row">
 									<div class="col-md-12">
-											<h2><?php the_archive_title(); ?></h2>
+											<h2><?php echo str_replace( 'Archives: ','',get_the_archive_title() ); ?></h2>
 											<!-- ol class="breadcrumb">
 													<li><a href="#">Home</a>
 													</li>
