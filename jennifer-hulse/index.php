@@ -39,7 +39,7 @@ $page_for_posts = get_post(get_option( 'page_for_posts' ));
                                     
                                     <h4 class="text-uppercase"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                     <ul class="post-meta">
-                                        <li><i class="fa fa-calendar"></i><?php echo get_the_date('M j Y'); ?>
+                                        <li><?php echo get_the_date('M j Y'); ?>
                                         </li>
                                         <?php if(sizeof($terms)) { ?>
 
