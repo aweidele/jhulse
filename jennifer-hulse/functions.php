@@ -183,7 +183,8 @@ function register_post_types() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array('title','editor','tags')
+		'supports' => array('title','editor','tags'),
+		'has_archive' => true,
 		//"menu_position" => 21
 	  ); 
  
