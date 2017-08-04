@@ -179,7 +179,7 @@ function register_post_types() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		'rewrite' => true,
+		//'rewrite' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
