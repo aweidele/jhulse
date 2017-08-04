@@ -162,6 +162,7 @@ function register_post_types() {
 	$labels = array(
 		'name' => _x('Portfolio', 'post type general name'),
 		'singular_name' => _x('Project', 'post type singular name'),
+                'archives' => __( 'Portfolio' ),
 		'add_new' => _x('Add New Project', 'portfolio item'),
 		'add_new_item' => __('Add New Project'),
 		'edit_item' => __('Edit Project'),
@@ -179,14 +180,14 @@ function register_post_types() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-                'rewrite' => array(
-                  'slug' => 'portfolio',
-                ),
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
 		'supports' => array('title','editor','tags'),
 		'has_archive' => true,
+                'rewrite' => array(
+                  'slug' => 'portfolio',
+                ),
 		//"menu_position" => 21
 	  ); 
  
