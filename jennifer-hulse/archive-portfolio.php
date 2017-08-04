@@ -1,13 +1,4 @@
-<?php get_header();
-	$hero = get_field('hero_image',$post->ID);
-	//$tax = get_categories(array('taxonomy'=>'project_category'));
-?>
-        <!--hero section-->
-        <div class="banner-state text-center vertical-align height-600" style="background-image: url(<?php echo $hero['sizes']['Hero Image']; ?>)">
-
-        </div>
-        <!--hero section-->
-
+<?php get_header(); ?>
                 <!--body content start-->
         <section class="body-content page-content">
             <div class="container">
