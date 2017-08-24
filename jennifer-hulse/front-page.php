@@ -43,10 +43,10 @@
                                     <div class="portfolio-slider">
                                         <ul class="slides">
                                            <?php foreach($gallery as $image) { ?>
-                                           
+
                                             <li>
-                                                <a href="<?php echo $image['url']; ?>" title="Freshness Photo">
-                                                    <img src="<?php echo $image['sizes']['Homepage Portfolio']; ?>" alt="">
+                                                <a href="<?php echo $image['url']; ?>" title="<?php the_title(); ?>">
+                                                    <img src="<?php echo $image['sizes']['Homepage Portfolio']; ?>" alt="<?php echo $image['description']; ?>">
                                                 </a>
                                             </li>
 
