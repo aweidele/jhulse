@@ -46,7 +46,7 @@
                                         <ul class="slides">
                                            <?php foreach($gallery as $image) { ?>
                                             <li>
-                                                <a href="<?php echo $image['url']; ?>" title="<?php echo $post->title">
+                                                <a href="<?php echo $image['url']; ?>" title="<?php //echo $post->title">
                                                     <img src="<?php echo $image['sizes']['Homepage Portfolio']; ?>" alt="">
                                                 </a>
                                             </li>
