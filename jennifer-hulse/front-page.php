@@ -35,6 +35,8 @@
 							$terms = wp_get_post_terms($post->ID,'project_category');
 							if(sizeof($gallery)) {
 ?>
+
+<pre><?php print_r($post); ?></pre>
                             <div class="portfolio-item<?php foreach($terms as $cat) { echo " cat-".$cat->slug; } ?>">
                                 <div class="thumb">
 <?php if(sizeof($gallery) == 1) { ?>
@@ -43,9 +45,8 @@
                                     <div class="portfolio-slider">
                                         <ul class="slides">
                                            <?php foreach($gallery as $image) { ?>
-                                           <pre><?php print_r($image); ?></pre>
                                             <li>
-                                                <a href="<?php echo $image['url']; ?>" title="Freshness Photo">
+                                                <a href="<?php echo $image['url']; ?>" title="<?php echo $post->title">
                                                     <img src="<?php echo $image['sizes']['Homepage Portfolio']; ?>" alt="">
                                                 </a>
                                             </li>
