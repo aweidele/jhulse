@@ -15,7 +15,7 @@ function themeEnqueue() {
 	wp_enqueue_style( 'shortcodes', get_template_directory_uri().'/assets/css/shortcodes.css' );
 	wp_enqueue_style( 'main-style', get_template_directory_uri().'/assets/css/style.css' );
 	wp_enqueue_style( 'default-theme', get_template_directory_uri().'/assets/css/magenta-theme.css' );
-	
+
 	wp_enqueue_script('modernizr',		get_template_directory_uri().'/assets/vendor/modernizr/modernizr.js',array(),'1.0.0',true);
 	wp_enqueue_script('jquery',			get_template_directory_uri().'/assets/vendor/jquery/jquery-1.10.2.min.js',array(),'1.0.0');
 	wp_enqueue_script('bootstrap',		get_template_directory_uri().'/assets/vendor/bootstrap/js/bootstrap.min.js',array(),'1.0.0',true);
@@ -56,7 +56,7 @@ function register_my_menu() {
 
 /*** IMAGE SIZES ***/
 add_theme_support('post-thumbnails');
-add_image_size('Portfolio Gallery',1170,800,true);
+add_image_size('Portfolio Gallery',1170,877,true);
 add_image_size('Hero Image',1920,99999);
 add_image_size('Homepage Portfolio',800,600,true);
 add_image_size('Homepage Portfolio SMall',350,263,true);
@@ -67,13 +67,13 @@ add_image_size('Blog Listing Sidebar',76,56,true);
 
 /*** THEME CUSTOMIZATION SETTINGS ***/
 function mytheme_customize_register( $wp_customize ) {
-	
+
 	// ADD SECTION
 	$wp_customize->add_section( 'theme_social' , array(
     	'title'      => __( 'Social Media', 'mytheme' ),
-		'priority'   => 30,) 
+		'priority'   => 30,)
   	);
-	
+
 	// ADD OPTIONS
 	$wp_customize->add_setting( 'theme_logo'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_copyright'    , array('transport' => 'refresh','type' => 'option'));
@@ -87,7 +87,7 @@ function mytheme_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'theme_google'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_dribbble'    , array('transport' => 'refresh','type' => 'option'));
 	$wp_customize->add_setting( 'theme_behance'    , array('transport' => 'refresh','type' => 'option'));
-	
+
 	/// ADD CONTROLS
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_logo',
       array(
@@ -173,7 +173,7 @@ function register_post_types() {
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
 	);
- 
+
 	$args = array(
 		'labels' => $labels,
 		'public' => true,
@@ -189,10 +189,10 @@ function register_post_types() {
                   'slug' => 'portfolio',
                 ),
 		//"menu_position" => 21
-	  ); 
- 
-	register_post_type( 'portfolio' , $args );	
-	
+	  );
+
+	register_post_type( 'portfolio' , $args );
+
 	// Project Tags Taxonomy
     register_taxonomy(
         'project_category',
@@ -211,7 +211,7 @@ function register_post_types() {
             'support' => array('tags')
         )
     );
-	
+
 	flush_rewrite_rules();
 
 }
@@ -233,12 +233,12 @@ add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 // Register and load the widget
 function wpb_load_widget() {
-	
+
 	// Unregister Default Widgets in order to use custom widgets
 	unregister_widget( 'WP_Widget_Tag_Cloud' );
 	unregister_widget( 'WP_Widget_Categories' );
 	unregister_widget( 'WP_Widget_Recent_Posts' );
-	
+
 	// Register widgets
 	register_widget( 'jh_widget_tag_cloud' );
 	register_widget( 'jh_widget_Categories' );
