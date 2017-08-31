@@ -1,5 +1,5 @@
-<?php 
-/* Template Name: About */ 
+<?php
+/* Template Name: About */
 get_header();
 if(have_posts()) : while(have_posts()) : the_post();
 $gallery = get_field('gallery');
@@ -34,7 +34,7 @@ $gallery = get_field('gallery');
                                     <ul class="slides">
 <?php foreach($gallery as $image) { ?>
                                         <li data-thumb="<?php echo $image['sizes']['About Gallery']; ?>">
-                                            <a href="javascript:;" title="Freshness Photo">
+                                            <a href="javascript:;" title="Headshot">
                                                 <img src="<?php echo $image['sizes']['About Gallery']; ?>" alt="">
                                             </a>
                                         </li>
@@ -54,7 +54,7 @@ $gallery = get_field('gallery');
 
         </section>
         <!--body content end-->
-<?php 
+<?php
 additional_content(get_field('additional_content'));
 endwhile;
 endif;
