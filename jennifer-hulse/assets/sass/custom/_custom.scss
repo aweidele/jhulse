@@ -8,7 +8,7 @@
 %fontsize16 { font-size: 16px; }
 
 .menuzord-menu {
-	> li { 
+	> li {
 		> a {
 			@extend %fontsize21;
 			text-transform: none;
@@ -22,7 +22,7 @@
 		a {
 			//@extend %fontsize16;
 			font-weight: 700;
-		} 
+		}
 	}
 }
 
@@ -86,3 +86,6 @@ p {
 	background-color: #bbbbbb;
 }
 
+.banner-state {
+	background-attachment: scroll;
+}

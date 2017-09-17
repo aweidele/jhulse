@@ -2118,3 +2118,5 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 
 @media screen and (max-width: 768px) { .banner-state { display: none; } }
 #footer.med { background-color: #bbbbbb; }
+
+.banner-state { background-attachment: scroll; }
