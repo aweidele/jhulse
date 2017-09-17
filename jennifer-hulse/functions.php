@@ -57,8 +57,8 @@ function register_my_menu() {
 /*** IMAGE SIZES ***/
 add_theme_support('post-thumbnails');
 add_image_size('Portfolio Gallery',1170,877,true);
-//add_image_size('Hero Image',1920,99999);
-add_image_size('Hero Image',1920,600);
+add_image_size('Hero Image',1920,99999);
+//add_image_size('Hero Image',1920,600);
 add_image_size('Homepage Portfolio',800,600,true);
 add_image_size('Homepage Portfolio SMall',350,263,true);
 add_image_size('About Gallery',501,501,true);
