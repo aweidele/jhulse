@@ -3,7 +3,7 @@
 	//$tax = get_categories(array('taxonomy'=>'project_category'));
 ?>
         <!--hero section-->
-        <div class="banner-state text-center vertical-align height-600" style="background-image: url(<?php echo $hero['sizes']['Hero Image']; ?>)">
+        <div class="banner-state text-center vertical-align height-450" style="background-image: url(<?php echo $hero['sizes']['Hero Image']; ?>)">
 
         </div>
         <!--hero section-->
