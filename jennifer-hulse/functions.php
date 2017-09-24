@@ -1,5 +1,5 @@
 <?php
-
+require_once('acf/acf.php');
 /** ENQUEUE STYLES AND SCRIPES **/
 function themeEnqueue() {
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Josefin+Slab:400,400i,600,600i,700,700i' );
